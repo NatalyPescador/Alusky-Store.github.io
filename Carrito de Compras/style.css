@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding-top: 90px;
+}
+
+header {
+    background-color: #ffffff;
+    position: fixed;
+    margin: -90px auto;
+}
+
+.header__superior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__superior__izquierdo {
+    display: flex;
+    padding: 5px;
+}
+
+.header__superior__izquierdo .logo {
+    cursor: pointer;
+    margin: auto 10px;
+
+}
+
+.header__superior__izquierdo .logo img {
+    width: 50px;
+    height: auto;
+    transition: all 0.5;
+}
+
+.header__superior__izquierdo .logo img:hover {
+    transform: scale(1.1);
+}
+
+.header__superior__izquierdo .barra__busqueda {
+    display: flex;
+    align-items: center;
+    margin: auto 10px;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"] {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 16px;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 300px;
+    margin-right: 20px;
+    transition: all 0.5 ease 0;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]::placeholder {
+    color: #8C635A;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]::placeholder:focus {
+    color: #593C39;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]:hover {
+    outline: none;
+    background-color: #f2f2f2;
+    transform: scale(1.01);
+}
+
+.header__superior__derecho {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: auto;
+}
+
+.header__superior__derecho .iniciar__sesion {
+    margin: 10px;
+}
+
+.header__superior__derecho .iniciar__sesion button {
+    color: #ffffff;
+    padding: 9px 25px;
+    background-color: #8C635A;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header__superior__derecho .iniciar__sesion button:hover {
+    background-color: #593C39;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.header__superior__derecho .registrarse {
+    margin: 10px;
+}
+
+.header__superior__derecho .registrarse button {
+    color: #ffffff;
+    padding: 9px 25px;
+    background-color: #8C635A;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header__superior__derecho .registrarse button:hover {
+    background-color: #593C39;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.header__superior__derecho .carrito__compras {
+    margin: auto 15px;
+}
+
+.header__superior__derecho .carrito__compras img {
+    width: 30px;
+    height: auto;
+    transition: all 0.3;
+}
+
+.header__superior__derecho .carrito__compras img:hover {
+    transform: scale(1.2);
+}
+
+.header__inferior .nav__bar {
+    list-style: none;
+    padding: 0;
+
+}
+
+.header__inferior .nav__bar ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__inferior .nav__bar ul li {
+    display: inline-block;
+    padding: 0 20px;
+    color: #ffffff;
+}
+
+.header__inferior .nav__bar ul li:hover {
+    background-color: #593C39;
+    border-radius: 30px;
+}
+
+.header__inferior .nav__bar a {
+    color: #8C635A;
+    text-decoration: none;
+}
+
+.header__inferior .nav__bar li a:hover {
+    color: #ffffff;
+}
+
+hr.line__bar {
+    color: #593C39;
+    background-color: #593C39;
+    width: 100vw;
+    height: 1px;
+    margin: 1px auto;
+}
+
+/* Aquí termina el header */
+
+hr.line__titles {
+    width: 10em;
+    height: 1px;
+    color: #8C635A;
+    margin: 2px;
+}
+
+.formularios {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contenedor-registrarse, .contenedor-iniciar-sesion {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.message {
+    width: 600px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.message p {
+    color: #8C635A;
+}
+
+.registrarse1 {
+    width: 400px;
+    height: 70vh;
+    border: 1px solid #593C39;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.registrarse1 .icono__candado img {
+    width: 60px;
+    border: 1px solid #593C39;
+    border-radius: 30px;
+    align-self: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #593C39;
+    text-align: center;
+}
+
+.registrarse1 .link {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.registrarse1 .link a {
+    font-size: 12px;
+    color:#8C635A
+}
+
+.registrarse1 .link a:hover {
+    color:#A0DBF2
+}
+
+.registrarse1 input {
+    align-self: flex-start;
+    margin: 8px 0;
+}
+
+.registrarse1 label {
+    color: #8C635A;
+}
+
+.registrarse1 input[type="text"] {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 16px;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 100%;
+    margin-right: 20px;
+    transition: all 0.5 ease 0;
+}
+
+.registrarse1 input[type="text"]::placeholder {
+    color: #8C635A;
+}
+
+.registrarse1 input[type="text"]::placeholder:focus {
+    color: #593C39;
+}
+
+.registrarse1 input[type="text"]:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.registrarse1 input[type="text"]:hover {
+    outline: none;
+    background-color: #f2f2f2;
+    transform: scale(1.01);
+}
+
+.registrarse1 input[type="email"] {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 16px;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 100%;
+    margin-right: 20px;
+    transition: all 0.5 ease 0;
+}
+
+.registrarse1 input[type="email"]::placeholder {
+    color: #8C635A;
+}
+
+.registrarse1 input[type="email"]::placeholder:focus {
+    color: #593C39;
+}
+
+.registrarse1 input[type="email"]:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.registrarse1 input[type="email"]:hover {
+    outline: none;
+    background-color: #f2f2f2;
+    transform: scale(1.01);
+}
+
+.registrarse1 input[type="password"] {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 16px;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 100%;
+    margin-right: 20px;
+    transition: all 0.5 ease 0;
+}
+
+.registrarse1 input[type="password"]::placeholder {
+    color: #8C635A;
+}
+
+.registrarse1 input[type="password"]::placeholder:focus {
+    color: #593C39;
+}
+
+.registrarse1 input[type="password"]:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.registrarse1 input[type="password"]:hover {
+    outline: none;
+    background-color: #f2f2f2;
+    transform: scale(1.01);
+}
+
+.redes-sociales {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icono__gmail img, .icono__facebook img{
+    width: 40px;
+}
+
+.sign-in-btn, .links {
+    margin: 10px 0;
+}
+
+.sign-up-btn button{
+    color: #ffffff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #A0DBF2;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    height: 38px;
+}
+
+.sign-up-btn button:hover {
+    background-color: #A8E6FC;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.iniciar_sesion {
+    width: 400px;
+    height: 70vh;
+    border: 1px solid #593C39;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.iniciar_sesion .icono__candado img {
+    width: 60px;
+    border: 1px solid #593C39;
+    border-radius: 30px;
+    align-self: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #593C39;
+    text-align: center;
+}
+
+.iniciar_sesion input {
+    align-self: flex-start;
+    margin: 8px 0;
+}
+
+.iniciar_sesion label {
+    color: #8C635A;
+}
+
+.iniciar_sesion input[type="email"] {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 16px;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 100%;
+    margin-right: 20px;
+    transition: all 0.5 ease 0;
+}
+
+.iniciar_sesion input[type="email"]::placeholder {
+    color: #8C635A;
+}
+
+.iniciar_sesion input[type="email"]::placeholder:focus {
+    color: #593C39;
+}
+
+.iniciar_sesion input[type="email"]:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.iniciar_sesion input[type="email"]:hover {
+    outline: none;
+    background-color: #f2f2f2;
+    transform: scale(1.01);
+}
+
+.iniciar_sesion input[type="password"] {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 16px;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 100%;
+    margin-right: 20px;
+    transition: all 0.5 ease 0;
+}
+
+.iniciar_sesion input[type="password"]::placeholder {
+    color: #8C635A;
+}
+
+.iniciar_sesion input[type="password"]::placeholder:focus {
+    color: #593C39;
+}
+
+.iniciar_sesion input[type="password"]:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.iniciar_sesion input[type="password"]:hover {
+    outline: none;
+    background-color: #f2f2f2;
+    transform: scale(1.01);
+}
+
+.iniciar_sesion .recuerdame {
+    align-self: flex-end;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.redes-sociales {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icono__gmail img, .icono__facebook img{
+    width: 40px;
+}
+
+.iniciar_sesion .sign-in-btn, .links {
+    margin: 10px 0;
+}
+
+.sign-in-btn button{
+    color: #ffffff;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #A0DBF2;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    height: 38px;
+}
+
+.sign-in-btn button:hover {
+    background-color: #A8E6FC;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.boton-registrarse button, .boton-iniciar-sesion button {
+    color: #ffffff;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #A0DBF2;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    height: 38px;
+}
+
+.boton-registrarse button:hover, .boton-iniciar-sesion button:hover {
+    background-color: #A8E6FC;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.iniciar_sesion .links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.iniciar_sesion .links a {
+    font-size: 12px;
+    color:#8C635A
+}
+
+.iniciar_sesion .links a:hover {
+    color:#A0DBF2
+}
+
+.contenedor-iniciar-sesion {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contenedor-iniciar-sesion.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor-registrarse.active {
+    opacity: 0;
+    visibility: hidden;
+}
+

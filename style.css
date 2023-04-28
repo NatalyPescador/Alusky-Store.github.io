@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding-top: 90px;
+}
+
+header {
+    background-color: #ffffff;
+    position: fixed;
+    margin: -90px auto;
+}
+
+.header__superior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__superior__izquierdo {
+    display: flex;
+    padding: 5px;
+}
+
+.header__superior__izquierdo .logo {
+    cursor: pointer;
+    margin: auto 10px;
+
+}
+
+.header__superior__izquierdo .logo img {
+    width: 50px;
+    height: auto;
+    transition: all 0.5;
+}
+
+.header__superior__izquierdo .logo img:hover {
+    transform: scale(1.1);
+}
+
+.header__superior__izquierdo .barra__busqueda {
+    display: flex;
+    align-items: center;
+    margin: auto 10px;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"] {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 16px;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 300px;
+    margin-right: 20px;
+    transition: all 0.5 ease 0;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]::placeholder {
+    color: #8C635A;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]::placeholder:focus {
+    color: #593C39;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]:hover {
+    outline: none;
+    background-color: #f2f2f2;
+    transform: scale(1.01);
+}
+
+.header__superior__derecho {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: auto;
+}
+
+.header__superior__derecho .iniciar__sesion {
+    margin: 10px;
+}
+
+.header__superior__derecho .iniciar__sesion button {
+    color: #ffffff;
+    padding: 9px 25px;
+    background-color: #8C635A;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header__superior__derecho .iniciar__sesion button:hover {
+    background-color: #593C39;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.header__superior__derecho .registrarse {
+    margin: 10px;
+}
+
+.header__superior__derecho .registrarse button {
+    color: #ffffff;
+    padding: 9px 25px;
+    background-color: #8C635A;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header__superior__derecho .registrarse button:hover {
+    background-color: #593C39;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.header__superior__derecho .carrito__compras {
+    margin: auto 15px;
+}
+
+.header__superior__derecho .carrito__compras img {
+    width: 30px;
+    height: auto;
+    transition: all 0.3;
+}
+
+.header__superior__derecho .carrito__compras img:hover {
+    transform: scale(1.2);
+}
+
+.header__inferior .nav__bar {
+    list-style: none;
+    padding: 0;
+
+}
+
+.header__inferior .nav__bar ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__inferior .nav__bar ul li {
+    display: inline-block;
+    padding: 0 20px;
+    color: #ffffff;
+}
+
+.header__inferior .nav__bar ul li:hover {
+    background-color: #593C39;
+    border-radius: 30px;
+}
+
+.header__inferior .nav__bar a {
+    color: #8C635A;
+    text-decoration: none;
+}
+
+.header__inferior .nav__bar li a:hover {
+    color: #ffffff;
+}
+
+hr.line__bar {
+    color: #593C39;
+    background-color: #593C39;
+    width: 100vw;
+    height: 1px;
+    margin: 1px auto;
+}
+
+.vista__principal {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.vista__principal .vista__izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #593C39;
+}
+
+.vista__principal .vista__izquierda h2 {
+    font-size: 3em;
+    
+}
+
+hr.line__titles {
+    width: 10em;
+    height: 1px;
+    color: #8C635A;
+    margin: 2px;
+}
+
+.vista__principal .vista__izquierda p {
+    margin: 2px;
+}
+
+.vista__principal .vista__izquierda .boton__ir {
+    margin: 10px;
+}
+
+.vista__principal .vista__izquierda .boton__ir button {
+    color: #ffffff;
+    padding: 9px 25px;
+    background-color: #A0DBF2;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    height: 38px;
+}
+
+.vista__principal .vista__izquierda .boton__ir button:hover {
+    background-color: #A8E6FC;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.vista__principal .imagen__modelo .modelo__mujer {
+    width: 340px;
+    height: auto;
+}
+
+.vista__principal .imagen__modelo .modelo__hombre {
+    width: 300px;
+    height: auto;
+}
+
+
+.section2 {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    color: #593C39;
+    font-size: 1.8em;
+}
+
+.seccion2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 30px;
+}
+
+.seccion2 h4 {
+    color: #593C39;
+    margin: 15px auto;
+    font-size: 1.3em;
+}
+
+.seccion2 img {
+    width: 200px;
+    height: auto;
+}
+
+.seccion2 .imagen {
+    margin-top: 25px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.1;
+}
+
+.seccion2 .imagen img:hover {
+ transform: scale(1.1);
+}
+
+.section3 {
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
