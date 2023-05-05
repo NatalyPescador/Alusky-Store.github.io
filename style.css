@@ -179,6 +179,8 @@ hr.line__bar {
     margin: 1px auto;
 }
 
+/*Aquí termina el codigo de estilo para el header*/
+
 .vista__principal {
     display: flex;
     justify-content: space-evenly;

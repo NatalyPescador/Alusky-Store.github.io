@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding-top: 90px;
+}
+
+header {
+    background-color: #ffffff;
+    position: fixed;
+    margin: -90px auto;
+}
+
+.header__superior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__superior__izquierdo {
+    display: flex;
+    padding: 5px;
+}
+
+.header__superior__izquierdo .logo {
+    cursor: pointer;
+    margin: auto 10px;
+
+}
+
+.header__superior__izquierdo .logo img {
+    width: 50px;
+    height: auto;
+    transition: all 0.5;
+}
+
+.header__superior__izquierdo .logo img:hover {
+    transform: scale(1.1);
+}
+
+.header__superior__izquierdo .barra__busqueda {
+    display: flex;
+    align-items: center;
+    margin: auto 10px;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"] {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 16px;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 300px;
+    margin-right: 20px;
+    transition: all 0.5 ease 0;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]::placeholder {
+    color: #8C635A;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]::placeholder:focus {
+    color: #593C39;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.header__superior__izquierdo .barra__busqueda input[type="text"]:hover {
+    outline: none;
+    background-color: #f2f2f2;
+    transform: scale(1.01);
+}
+
+.header__superior__derecho {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: auto;
+}
+
+.header__superior__derecho .iniciar__sesion {
+    margin: 10px;
+}
+
+.header__superior__derecho .iniciar__sesion button {
+    color: #ffffff;
+    padding: 9px 25px;
+    background-color: #8C635A;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header__superior__derecho .iniciar__sesion button:hover {
+    background-color: #593C39;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.header__superior__derecho .registrarse {
+    margin: 10px;
+}
+
+.header__superior__derecho .registrarse button {
+    color: #ffffff;
+    padding: 9px 25px;
+    background-color: #8C635A;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header__superior__derecho .registrarse button:hover {
+    background-color: #593C39;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.header__superior__derecho .carrito__compras {
+    margin: auto 15px;
+}
+
+.header__superior__derecho .carrito__compras img {
+    width: 30px;
+    height: auto;
+    transition: all 0.3;
+}
+
+.header__superior__derecho .carrito__compras img:hover {
+    transform: scale(1.2);
+}
+
+.header__inferior .nav__bar {
+    list-style: none;
+    padding: 0;
+
+}
+
+.header__inferior .nav__bar ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__inferior .nav__bar ul li {
+    display: inline-block;
+    padding: 0 20px;
+    color: #ffffff;
+}
+
+.header__inferior .nav__bar ul li:hover {
+    background-color: #593C39;
+    border-radius: 30px;
+}
+
+.header__inferior .nav__bar a {
+    color: #8C635A;
+    text-decoration: none;
+}
+
+.header__inferior .nav__bar li a:hover {
+    color: #ffffff;
+}
+
+hr.line__bar {
+    color: #593C39;
+    background-color: #593C39;
+    width: 100vw;
+    height: 1px;
+    margin: 1px auto;
+}
+
+/*Aquí termina el codigo de estilo para el header*/
+
+main {
+    margin-top: 20px;
+    display: flex;
+}
+
+.navbar-catalogo {
+    border: 1px solid #8C635A;
+    margin: 20px;
+    padding: 20px;
+    /* width: 300px; */
+    width: 20vw;
+    height: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-catalogo ul li {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.navbar-catalogo ul li:first-child {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #593C39;
+}
+
+.navbar-catalogo ul li a{
+    text-decoration: none;
+    color: #8C635A;
+}
+
+.navbar-catalogo ul li a:hover{
+    color: #A0DBF2;
+}
+
+.navbar-catalogo .lista-tallas {
+    align-self: center;
+
+}
+
+.navbar-catalogo .form-catalogo .tallas {
+    display: block;
+    margin: 20px;
+    width: 15vw;
+    background-color: #f2f2f2;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16px;
+    color: #8C635A;
+    cursor: pointer;
+}
+
+.navbar-catalogo .form-catalogo .selección-colores {
+    color: #8C635A;
+    margin: 50px 0;
+}
+
+.navbar-catalogo .form-catalogo input[type="color"] {
+    outline: none;
+    border: none;
+    margin: 10px;
+}
+
+.seccion-catalogo {
+    width: 80vw;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-template-rows: auto;
+
+}
+
+.seccion-catalogo .imagenes-catalogo {
+    width: 300px;
+    height: 350px;
+}
+
+footer {
+    background-color: #8C635A;
+    margin-top: 60px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-footer-superior {
+    width: 100%;
+    height: 300px;
+    padding: 100px 50px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.image-logo {
+    position: absolute;
+    bottom: 250px;
+    border: 1px solid #623E2A;
+}
+
+.image-logo img {
+    width: 60px;
+}
+
+.lista-productos, .lista-contacto, .lista-nosotros {
+    border: 1px solid #ffffff;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.lista-contacto img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.div-footer-superior ul li {
+    list-style-type: none;
+    text-align: center;
+    margin: 10px;
+    line-height: 20px;
+    font-size: 1em;
+}
+
+.div-footer-superior ul li:first-child {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.div-footer-superior ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.div-footer-superior ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline #ffffff;
+}
+
+.redes-sociales-imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes-sociales-imgs img {
+    width: 20px;
+    margin: 10px;
+}
+
+
