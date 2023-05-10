@@ -181,7 +181,41 @@ hr.line__bar {
 
 /*Aquí termina el codigo de estilo para el header*/
 
+main {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+.section1, .section2, .section3 {
+    width: 1300px;
+    height: 400px;
+    margin: 40px 0;
+    display: flex;
+    background-color: #8C635A;
+    color: #ffffff;
+    border-radius: 60px;
+    align-self: center;
+}
+
+.section1 h2, .section2 h2, .section3 h2 {
+    color: #ffffff;
+    font-size: 1.8em;
+}
+
+.section1 img, .section2 img, .section3 img {
+    width: 700px;
+    height: 400px;
+}
+
+.div-contenido {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    margin: 0 30px;
+}
 
 
 
