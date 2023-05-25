@@ -24,6 +24,7 @@ header {
 .header__superior__izquierdo {
     display: flex;
     padding: 5px;
+    width: 50%;
 }
 
 .header__superior__izquierdo .logo {
@@ -82,8 +83,10 @@ header {
 .header__superior__derecho {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: 5px;
-    width: auto;
+    margin-right: 10px;
+    width: 50%;
 }
 
 .header__superior__derecho .iniciar__sesion {
@@ -177,125 +180,4 @@ hr.line__bar {
     width: 100vw;
     height: 1px;
     margin: 1px auto;
-}
-
-/*Aquí termina el codigo de estilo para el header*/
-
-main {
-    width: 100vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.section1, .section2, .section3 {
-    width: 1300px;
-    height: 400px;
-    margin: 40px 0;
-    display: flex;
-    background-color: #8C635A;
-    color: #ffffff;
-    border-radius: 60px;
-    align-self: center;
-}
-
-.section1 h2, .section2 h2, .section3 h2 {
-    color: #ffffff;
-    font-size: 1.8em;
-}
-
-.section1 img, .section2 img, .section3 img {
-    width: 700px;
-    height: 400px;
-}
-
-.div-contenido {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    text-align: center;
-    margin: 0 30px;
-}
-
-
-
-
-/* Aquí empieza el footer*/
-
-footer {
-    background-color: #8C635A;
-    margin-top: 60px;
-}
-
-.footer-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.div-footer-superior {
-    width: 100%;
-    height: 300px;
-    padding: 100px 50px;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-}
-
-.image-logo {
-    position: absolute;
-    bottom: 250px;
-    border: 1px solid #623E2A;
-}
-
-.image-logo img {
-    width: 60px;
-}
-
-.lista-productos, .lista-contacto, .lista-nosotros {
-    border: 1px solid #ffffff;
-    width: 300px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
-.lista-contacto img {
-    width: 20px;
-    margin-right: 10px;
-}
-
-.div-footer-superior ul li {
-    list-style-type: none;
-    text-align: center;
-    margin: 10px;
-    line-height: 20px;
-    font-size: 1em;
-}
-
-.div-footer-superior ul li:first-child {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.div-footer-superior ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.div-footer-superior ul li a:hover {
-    color: #ffffff;
-    text-decoration: underline #ffffff;
-}
-
-.redes-sociales-imgs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.redes-sociales-imgs img {
-    width: 20px;
-    margin: 10px;
 }

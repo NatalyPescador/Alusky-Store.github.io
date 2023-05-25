@@ -1,7 +1,7 @@
 const $btnSignIn= document.querySelector('.sign-in-btn'),
       $btnSignUp = document.querySelector('.sign-up-btn'),  
-      $signUp = document.querySelector('.contenedor-registrarse'),
-      $signIn  = document.querySelector('.contenedor-iniciar-sesion');
+      $signUp = document.querySelector('.main_sign_up_container'),
+      $signIn  = document.querySelector('.main_sign_in_container');
 
 document.addEventListener('click', e => {
     if (e.target === $btnSignIn || e.target === $btnSignUp) {

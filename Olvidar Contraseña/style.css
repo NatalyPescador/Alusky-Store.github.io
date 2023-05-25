@@ -1,0 +1,146 @@
+.forgot_password {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+.forgot_password_container {
+    width: 100%;
+    height: 550px;
+    max-width: 400px;
+    max-height: 600px;
+    background-color: #ffffff;
+}
+
+.forgot_password_icons {
+    margin: 1rem;
+}
+
+.forgot_password_icons img {
+    width: 70px;
+}
+
+.forgot_password_form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 1.9rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #593C39;
+    text-align: center;
+}
+
+h2 {
+    font-size: .9rem;
+    color: #8C635A;
+    margin-top: -1.6rem;
+}
+
+.forgot_password_form .links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.forgot_password_form .links a {
+    text-decoration: none;
+    color: #8C635A;
+    font-size: .8rem;
+}
+
+.forgot_password_form .links a:hover {
+    color: #A8E6FC;
+}
+
+
+.forgot_password_form input[type="email"] {
+    border: none;
+    border-radius: 20px;
+    padding: .7rem 1rem;
+    font-size: 1rem;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 90%;
+    transition: all .5s;
+}
+
+.forgot_password_form input[type="email"]::placeholder {
+    color: #8C635A;
+}
+
+.forgot_password_form input[type="email"]::placeholder:focus {
+    color: #8C635A;
+}
+
+.forgot_password_form input[type="email"]:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.forgot_password_form input[type="email"]:hover {
+    transform: scale(1.01);
+}
+
+.social_media {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social_media img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.forgot_password_form button {
+    border: none;
+    border-radius: 30px;
+    padding: .8rem 1.5rem;
+    background-color: #A0DBF2;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.forgot_password_form button:hover {
+    background-color: #A8E6FC;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:899px) {
+    .forgot_password {
+        align-items: flex-start;
+    }
+
+    .forgot_password_icons .padlock_icon {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .forgot_password {
+        align-items: center;
+        /* background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center; */
+    }
+    .forgot_password_container {
+        border: 1px solid #8C635A;
+    }
+    
+    .forgot_password_icons {
+        border: 1px solid #593C39;
+        border-radius: 60px;
+    }
+    .forgot_password_icons .logo_icon {
+        visibility: hidden;
+        position: absolute;
+    }
+
+}

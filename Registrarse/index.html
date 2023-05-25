@@ -4,77 +4,76 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../header_style.css">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" type="image/x-icon" href="../favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
         <title>Alusky Store</title>
     </head>
     <body>
-        <header class="header">
-            <div class="header__superior">
-                <div class="header__superior__izquierdo">
-                    <div class="logo">
-                        <a href="../index.html"><img src="../Imagenes/LOGO.jpg" alt="Logo Alusky Store"></a>
+        <header>
+            <nav class="nav_bar">
+                <div class="header_container">
+                    <div class="top_header">
+                        <div class="left_header">
+                            <a href="../index.html" class="logo_img">
+                                <img src="../Imagenes/LOGO.jpg" alt="Logo de Alusky Store">
+                            </a>
+                            <input type="text" placeholder="Buscar en Alusky" class="search_bar">
+                        </div>
+                        <div class="right_header">
+                            <button  onclick="location.href='../Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
+                            <button onclick="location.href='../Registrarse/index.html'" class="sign_in_button">Registrarse</button>
+                            <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='../Carrito de Compras/index.html'">
+                                <img src="../Iconos/Carrito de Compras.png">
+                            </button>
+                            <button type="button" class="nav_bar_button dropdown_menu" id="dropdown_menu">
+                                <img src="../Iconos/menu.png" alt="menu desplegable">
+                            </button>
+                        </div>
                     </div>
-                    <div class="barra__busqueda">
-                        <input type="text" placeholder="Buscar en Alusky">
+                    <div class="nav_list" id="menu">
+                        <button type="button" class="close_button" id="close_button">
+                            <img src="../Iconos/close.png" class="close_icon">
+                        </button>
+                        <a href="Iniciar Sesion/index.html" class="link_account">Mi Cuenta</a>
+                        <ul class="nav_menu">
+                            <li><a href="../Catálogo/index.html">Catálogo</a></li>
+                            <li><a href="../Ropa/index.html">Ropa</a></li>
+                            <li><a href="../Accesorios/index.html">Accesorios</a></li>
+                            <li><a href="../Personalizar/index.html">Personalizar</a></li>
+                            <li><a href="../Preguntas Frecuentes/index.html">Preguntas Frecuentes</a></li>
+                        </ul> 
+                        <hr class="line__bar"> 
                     </div>
                 </div>
-                <div class="header__superior__derecho">
-                    <div class="iniciar__sesion">
-                        <button  onclick="location.href='../Iniciar Sesion/index.html'">Iniciar Sesión</button>
-                    </div>
-                    <div class="registrarse">
-                        <button onclick="location.href='index.html'">Registrarse</button>
-                    </div>
-                    <div class="carrito__compras">
-                        <a href="../Carrito de Compras/index.html"><img src="../Iconos/Carrito de Compras.png"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="header__inferior">
-                <nav class="nav__bar">
-                    <ul>
-                        <li><a href="../Catálogo/index.html">Catálogo</a></li>
-                        <li><a href="../Ropa/index.html">Ropa</a></li>
-                        <li><a href="../Accesorios/index.html">Accesorios</a></li>
-                        <li><a href="../Personalizar/index.html">Personalizar</a></li>
-                        <li><a href="../Sobre Nosotros/index.html">Sobre Nosotros</a></li>
-                        <li><a href="../Centro de Ayuda/index.html">Centro de Ayuda</a></li>
-                    </ul>
-                    <hr class="line__bar">
-                </nav>
-            </div>
+            </nav>
+            <script src="../showMenu.js"></script>
         </header>
         <main>
-            <section class="sign-up">
-                <form class="registrarse1">
-                    <div class="icono__candado">
-                        <img src="../Iconos/padlock.png">
-                    </div>
-                    <h1>Registrarse</h1>
-                    <div class="link">
-                        <div class="link1">
+            <section class="sign_up">
+                <div class="sign_up_container">
+                    <form class="sign_up_form">
+                        <div class="sign_up_icons">
+                            <img src="../Iconos/padlock.png" class="padlock_icon">
+                            <img src="../Imagenes/LOGO.jpg" class="logo_icon" alt="Logo de Alusky Store">
+                        </div>
+                        <h1>Registrarse</h1>
+                        <div class="links">
                             <a href="../Iniciar Sesion/index.html">¿Ya estás registrado? Accede</a>
                         </div>
-                    </div>
-                        <input type="text" placeholder="Nombre">
-                        <input type="email" placeholder="Correo electrónico">
-                        <input type="password" placeholder="Contraseña">
-                    <div class="redes-sociales">
-                        <div class="icono__gmail">
+                        <input id="name_sign-up" type="text" placeholder="Nombre">
+                        <input id="email_sign-up" type="email" placeholder="Correo electrónico">
+                        <input id="password_sign-up" type="password" placeholder="Contraseña">
+                        <div class="social_media">
                             <img src="../Iconos/gmail.png">
-                        </div>
-                        <div class="icono__facebook">
                             <img src="../Iconos/facebook.png">
                         </div>
-                    </div>
-                    <div class="sign-up-btn">
                         <button>Registrarse</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </section>
         </main>  
     </body>
