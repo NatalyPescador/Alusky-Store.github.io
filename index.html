@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="headerstyle.css">
+        <link rel="stylesheet" type="text/css" href="header_style.css">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="footerstyle.css">
+        <link rel="stylesheet" type="text/css" href="footer_style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap" rel="stylesheet">
@@ -14,178 +14,187 @@
         <title>Alusky Store</title>
     </head>
     <body>
-        <header class="header">
-            <div class="header__superior">
-                <div class="header__superior__izquierdo">
-                    <div class="logo"><a href="index.html"><img src="Imagenes/LOGO.jpg" alt="Logo Alusky Store"></a></div>
-                    <div class="barra__busqueda"><input type="text" placeholder="Buscar en Alusky"></div>
-                </div>
-                <div class="header__superior__derecho">
-                    <div class="iniciar__sesion"><button  onclick="location.href='Iniciar Sesion/index.html'">Iniciar Sesión</button></div>
-                    <div class="registrarse"><button onclick="location.href='Registrarse/index.html'">Registrarse</button></div>
-                    <div class="carrito__compras"><a href="Carrito de Compras/index.html"><img src="Iconos/Carrito de Compras.png"></a></div>
-                </div>
-            </div>
-            <div class="header__inferior">
-                <nav class="nav__bar">
-                    <ul>
-                        <li><a href="Catálogo/index.html">Catálogo</a></li>
-                        <li><a href="Ropa/index.html">Ropa</a></li>
-                        <li><a href="Accesorios/index.html">Accesorios</a></li>
-                        <li><a href="Personalizar/index.html">Personalizar</a></li>
-                        <li><a href="Preguntas Frecuentes/index.html">Preguntas Frecuentes</a></li>
-                    </ul>
-                    <hr class="line__bar">
-                </nav>
-            </div>
-        </header>
-        <main>
-            <section class="section1">
-                <div class="vista__principal">
-                    <div class="vista__izquierda">
-                        <h2>Diseños</h2>
-                        <h2>Personalizados</h2>
-                        <hr class="line__titles">
-                        <p>Te ayudamos a personalizar tus prendas</p>
-                        <p>de vestir de la manera que desees</p>
-                        <div class="boton__ir">
-                            <button onclick="location.href='Personalizar/index.html'">Ir a personalizar</button>
+        <header>
+            <nav class="nav_bar">
+                <div class="header_container">
+                    <div class="top_header">
+                        <div class="left_header">
+                            <a href="index.html" class="logo_img">
+                                <img src="Imagenes/LOGO.jpg" alt="Logo de Alusky Store">
+                            </a>
+                            <input type="text" placeholder="Buscar en Alusky" class="search_bar">
+                        </div>
+                        <div class="right_header">
+                            <button  onclick="location.href='Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
+                            <button onclick="location.href='Registrarse/index.html'" class="sign_in_button">Registrarse</button>
+                            <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='Carrito de Compras/index.html'">
+                                <img src="Iconos/Carrito de Compras.png">
+                            </button>
+                            <button type="button" class="nav_bar_button dropdown_menu" id="dropdown_menu">
+                                <img src="Iconos/menu.png" alt="menu desplegable">
+                            </button>
                         </div>
                     </div>
-                    <div class="imagen__modelo">
-                        <img src="Imagenes/ModeloMujer.jpg" alt="modelo mujer del producto" class="modelo__mujer">
-                        <img src="Imagenes/ModeloHombre.png" alt="modelo hombre del producto" class="modelo__hombre">
-                    </div>    
+                    <div class="nav_list" id="menu">
+                        <button type="button" class="close_button" id="close_button">
+                            <img src="Iconos/close.png" class="close_icon">
+                        </button>
+                        <a href="Iniciar Sesion/index.html" class="link_account">Mi Cuenta</a>
+                        <ul class="nav_menu">
+                            <li><a href="Catálogo/index.html">Catálogo</a></li>
+                            <li><a href="Ropa/index.html">Ropa</a></li>
+                            <li><a href="Accesorios/index.html">Accesorios</a></li>
+                            <li><a href="Personalizar/index.html">Personalizar</a></li>
+                            <li><a href="Preguntas Frecuentes/index.html">Preguntas Frecuentes</a></li>
+                        </ul> 
+                        <hr class="line__bar"> 
+                    </div>
                 </div>
+            </nav>
+            <script src="showMenu.js"></script>
+        </header>
+        <main>
+            <section class="main_section">
+                <div class="main_section_container">
+                    <div class="main_section_image">
+                        <img src="Imagenes/Imagen Principal.png" alt="Imagen de modelos de prendas de vestir">
+                    </div>
+                    <div class="main_section_div">
+                        <h2>Diseños</h2>
+                        <h2>Personalizados</h2>
+                        <hr class="line_titles">
+                        <p>Te ayudamos a personalizar tus prendas</p>
+                        <p>de vestir de la manera que desees</p>
+                        <button onclick="location.href='Personalizar/index.html'" class="personalize_button">Ir a personalizar</button>
+                    </div>
+                </div>  
             </section>
             <section class="section2">
-                <h3>Nuestros productos más vendidos</h3>
-                <hr class="line__titles">
-                    <div class="seccion2">
-                        <div class="imagen 1">
+                <div class="second_section_container">
+                    <h3>Nuestros productos más vendidos</h3>
+                    <hr class="line_titles">
+                    <div class="slider_container">
+                        <div class="first_image">
                             <h4>Buzos Hombre</h4>
                             <div>
                                 <img src="Imagenes/IMG_0025.png" alt="Buzo gris Bugs Bunny">
                             </div>
                         </div>
-                        <div class="imagen 2">
+                        <div class="second_image">
                             <h4>Camisetas</h4>
                             <div>
                                 <img src="Imagenes/Deff copia.png" alt="Camisa blanca Deff">
                             </div>
                         </div>
-                        <div class="imagen 3">
+                        <div class="third_image">
                             <h4>Buzos Mujer</h4>
                             <div>
                                 <img src="Imagenes/IMG_9695.png" alt="Buzo rosado">
                             </div>
                         </div>
-                        <div class="imagen 4">
+                        <div class="fourth_image">
                             <h4>Pijamas</h4>
                             <div>
                                 <img src="Imagenes/IMG_9950.png" alt="Pijama SpiderMan">
                             </div>
                         </div>
                     </div>
+                </div>
             </section>
             <section class="section3">
-                <h3>Selecciona dependiendo del estilo</h3>
-                <hr class="line__titles">
-                <div class="contenedor-divs">
-                    <div class="div-izquierdo">
-                        <ul class="lista-izquierda">
-                            <li class="iz-items">ROPA</li>
-                            <li class="iz-items"><a href="Camisetas/index.html">Camisetas</a></li>
-                            <li class="iz-items"><a href="Buzos/index.html">Buzos</a></li>
-                            <li class="iz-items"><a href="#">Sudaderas</a></li>
-                            <li class="iz-items"><a href="#">Pijamas</a></li>
-                        </ul>
-                        <div class="img-izquierda">
-                            <img src="Imagenes/joaaaan.png" alt="camiseta blanca estampada" class="imagenes-divs">
+                <div class="third_section_container">
+                    <h3>Selecciona dependiendo del estilo</h3>
+                    <hr class="line_titles">
+                    <div class="root_container">
+                        <div class="container1">
+                            <ul class="list1">
+                                <li class="items1">ROPA</li>
+                                <li class="items1"><a href="Camisetas/index.html">Camisetas</a></li>
+                                <li class="items1"><a href="Buzos/index.html">Buzos</a></li>
+                                <li class="items1"><a href="#">Sudaderas</a></li>
+                                <li class="items1"><a href="#">Pijamas</a></li>
+                            </ul>
+                            <div class="image1">
+                                <img src="Imagenes/joaaaan.png" alt="camiseta blanca estampada" class="imagenes-divs">
+                            </div>
                         </div>
-                    </div>
-                    <div class="div-derecho">
-                        <ul class="lista-derecha">
-                            <li class="der-items">ACCESORIOS</li>
-                            <li class="der-items"><a href="#">Posillos</a></li>
-                            <li class="der-items"><a href="#">Gorras</a></li>
-                        </ul>
-                        <div class="img-derecha">
-                            <img src="Imagenes/Gorra.jpg" alt="Gorra café" class="imagenes-divs">
+                        <div class="container2">
+                            <ul class="list2">
+                                <li class="items2">ACCESORIOS</li>
+                                <li class="items2"><a href="#">Posillos</a></li>
+                                <li class="items2"><a href="#">Gorras</a></li>
+                            </ul>
+                            <div class="image2">
+                                <img src="Imagenes/Gorra.jpg" alt="Gorra café" class="imagenes-divs">
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="section4">
-                <div class="video-section">
+                <div class="video_section">
                     <h3>¿Cómo nos puedes enviar tus diseños?</h3>
-                    <hr class="line__titles">
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QPgtolnhwRI?start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video"></iframe>
+                    <hr class="line_titles">
+                    <div class="video_container">
+                        <iframe src="https://www.youtube.com/embed/QPgtolnhwRI?start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video"></iframe>
                     </div>
                 </div>
             </section>
             <section class="section5">
-                <h3>¿Cómo funciona?</h3>
-                <hr class="line__titles">
-                <div class="cards-container">
-                    <div class="card1">
-                        <div class="img-card1">
+                <div class="fifth_section_container">
+                    <h3>¿Cómo funciona?</h3>
+                    <hr class="line_titles">
+                    <div class="cards_container">
+                        <div class="card1">
                             <img src="Imagenes/Enviar Diseño.png">
+                            <h4>Nos envías tu diseño</h4>
+                            <p>Nos puedes envíar tu diseño personalizado ya sea por medio de Whatsapp o por medio de nuestra página principal junto a la indicación de la prenda o accesorio que deseas que sea estampado para continuar con el proceso.</p>
                         </div>
-                        <h4>Nos envías tu diseño</h4>
-                        <p>Nos puedes envíar tu diseño personalizado ya sea por medio de Whatsapp o por medio de nuestra página principal junto a la indicación de la prenda o accesorio que deseas que sea estampado para continuar con el proceso.</p>
-                    </div>
-                    <div class="card2">
-                        <div class="img-card2">
+                        <div class="card2">
                             <img src="Imagenes/Procesar.png">
+                            <h4>Lo procesamos</h4>
+                            <p>Una vez que hayas realizado tu diseño y hayas seleccionado la prenda o accesorio a estampar, puedes dejarnos el resto a nosotros. Somos expertos en nuestro oficio y respaldamos todas y cada una de las prendas que salen de nuestras instalaciones.</p>
                         </div>
-                        <h4>Lo procesamos</h4>
-                        <p>Una vez que hayas realizado tu diseño y hayas seleccionado la prenda o accesorio a estampar, puedes dejarnos el resto a nosotros. Somos expertos en nuestro oficio y respaldamos todas y cada una de las prendas que salen de nuestras instalaciones.</p>
-                    </div>
-                    <div class="card3">
-                        <div class="img-card3">
+                        <div class="card3">
                             <img src="Imagenes/Entregar pedido.png">
+                            <h4>Te enviamos tu producto</h4>
+                            <p>Una vez terminado el proceso de personalización realizaremos el envío del producto directamente a la dirección que tu nos hayas indicado. Para que puedas empezar a disfrutar de tu prenda o accesorio sin ninguna complicación.</p>
                         </div>
-                        <h4>Te enviamos tu producto</h4>
-                        <p>Una vez terminado el proceso de personalización realizaremos el envío del producto directamente a la dirección que tu nos hayas indicado. Para que puedas empezar a disfrutar de tu prenda o accesorio sin ninguna complicación.</p>
                     </div>
                 </div>
             </section>
         </main>
         <footer>
-            <div class="footer-section">
-                <div class="div-footer-superior">
-                    <div class="image-logo">
-                        <a href="index.html"><img src="Imagenes/LOGO.jpg" alt="Logo de la marca" class="logo-footer"></a>
-                    </div>
-                    <div class="lista-productos">
+            <div class="footer_container">
+                <a href="index.html"><img src="Imagenes/LOGO.jpg" alt="Logo de la marca" class="logo_image"></a>
+                <div class="lists_container">
+                    <div class="products_list">
                         <ul>
-                            <li class="item-list1">Nuestros Productos</li>
-                            <li class="item-list1"><a href="Catálogo/index.html">Catálogo</a></li>
-                            <li class="item-list1"><a href="Ropa/index.html">Ropa</a></li>
-                            <li class="item-list1"><a href="Accesorios/index.html">Accesorios</a></li>
+                            <li>Nuestros Productos</li>
+                            <li><a href="Catálogo/index.html">Catálogo</a></li>
+                            <li><a href="Ropa/index.html">Ropa</a></li>
+                            <li><a href="Accesorios/index.html">Accesorios</a></li>
                         </ul>
                     </div>
-                    <div class="lista-nosotros">
+                    <div class="social_list">
                         <ul>
                             <li class="item-list3">Redes Sociales</li>
                         </ul>
-                        <div class="redes-sociales-imgs">
-                            <a href="https://www.instagram.com/alusky_store/" target="_blank"><img src="Imagenes/instagram.png"></a>
-                            <a href="https://api.whatsapp.com/send?phone=%2B573133195045&data=AWBiZ8hvcQHLLCHOBPcjNP2Y2Z8PUpnIZ6uO4fu22WoL1RPmE99TUrbjGeXCGZw7fJBbWfv3NBk4iGbt_5CJQWrn3VZrjowycmKbrH_A46UbbUPlwdGGGoLel1WghFHb9fR-QlcbCxcuO4FjwFopbCV2aBuw1kQqgrzdZxdAUuWjxH2ue72tIu1FQWv0bW4SSdc0V_noVryxl6Rs_8Myr26zBxy1C9dtjK0uIi-1H4ORunm0ZxUDDcVpE68WgT-_7_7syImikr_mK244FJH25F9XqEfP3R8Uugm1ZNdLBt1X4V4DEq4&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR3phOCq_V4DO2aTMNqnDPTunju5I3LDUe8w2QnA_bfRseAGQewGA2GQ7ec" target="_blank"><img src="Imagenes/whatsapp.png"></a>
-                            <a href="https://www.facebook.com/profile.php?id=100075797061046" target="_blank"><img src="Imagenes/facebook.png"></a>
+                        <div class="social_media_images">
+                            <a href="https://www.instagram.com/alusky_store/" target="_blank"><img src="Iconos/instagram.png"></a>
+                            <a href="https://api.whatsapp.com/send?phone=%2B573133195045&data=AWBiZ8hvcQHLLCHOBPcjNP2Y2Z8PUpnIZ6uO4fu22WoL1RPmE99TUrbjGeXCGZw7fJBbWfv3NBk4iGbt_5CJQWrn3VZrjowycmKbrH_A46UbbUPlwdGGGoLel1WghFHb9fR-QlcbCxcuO4FjwFopbCV2aBuw1kQqgrzdZxdAUuWjxH2ue72tIu1FQWv0bW4SSdc0V_noVryxl6Rs_8Myr26zBxy1C9dtjK0uIi-1H4ORunm0ZxUDDcVpE68WgT-_7_7syImikr_mK244FJH25F9XqEfP3R8Uugm1ZNdLBt1X4V4DEq4&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR3phOCq_V4DO2aTMNqnDPTunju5I3LDUe8w2QnA_bfRseAGQewGA2GQ7ec" target="_blank"><img src="Iconos/whatsapp.png"></a>
+                            <a href="https://www.facebook.com/profile.php?id=100075797061046" target="_blank"><img src="Iconos/facebook-white.png"></a>
                         </div>
                     </div>
-                    <div class="lista-contacto">
+                    <div class="contact_list">
                         <ul>
-                            <li class="item-list2">Contactanos</li>
-                            <li class="item-list2"><img src="Imagenes/Phone.png" class="phone-img">+57 313 319 5045</li>
-                            <li class="item-list2"><img src="Imagenes/mail.png" class="mail-img">aluskystore@gmail.com</li>
+                            <li>Contactanos</li>
+                            <li><img src="Iconos/Phone.png" class="phone_img">&nbsp +57 313 319 5045</li>
+                            <li><img src="Iconos/mail.png" class="mail_img">&nbsp aluskystore@gmail.com</li>
                         </ul>
                     </div>
                 </div>
-                <div class="div-footer-inferior">
+                <div class="brand_container">
                     <hr class="line__bar">
                     <p>Copyright © 2023 Alusky Store</p>
                 </div>

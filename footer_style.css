@@ -1,0 +1,90 @@
+footer {
+    margin-top: 2rem;
+    background-color: #8C635A;
+}
+
+.footer_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_container .logo_image {
+    width: 50px;
+    margin-top: -1.5rem;
+    border: 1px solid #8C635A;
+}
+
+.lists_container {
+    width: 90%;
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lists_container ul li {
+    list-style-type: none;
+    margin: .5rem 0;
+}
+
+.lists_container a {
+    color: #ffffff;
+}
+
+.lists_container ul li:first-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.products_list, 
+.social_list,
+.contact_list {
+    width: 90%;
+    max-width: 300px;
+    height: 150px;
+    margin: .8rem 0;
+    padding: .8rem .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    border: 1px solid #ffffff;
+}
+
+.social_media_images {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social_media_images img {
+    width: 30px;
+}
+
+.contact_list li {
+    display: flex;
+    justify-content: center;
+}
+
+.contact_list img {
+    width: 20px;
+}
+
+.brand_container p {
+    margin: .2rem 0;
+    text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    .lists_container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+}
