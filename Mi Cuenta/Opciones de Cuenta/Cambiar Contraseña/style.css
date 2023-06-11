@@ -1,0 +1,162 @@
+.left_nav_bar {
+    display: none;
+}
+
+.top_nav_bar {
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: .3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 5px solid #8C635A;
+}
+
+.top_nav_bar p a {
+    text-decoration: none;
+    color: #8C635A;
+    cursor: pointer;
+}
+
+.top_nav_bar p a:hover {
+    color: #A0DBF2;
+    /*A8E6FC*/
+}
+
+.top_nav_bar p span {
+    color: #593C39;
+}
+
+.top_nav_bar h2 {
+    color: #593C39;
+}
+
+.main_section {
+    width: 100%;
+    margin: 5.5rem 0;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.password_info_container {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.label {
+    color: #593C39;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.input {
+    border: none;
+    border-radius: 20px;
+    padding: .7rem 1rem;
+    font-size: 1rem;
+    color: #8C635A;
+    background-color: #f5f5f5;
+    width: 90%;
+    transition: all .5s;
+}
+.input::placeholder {
+    color: #8C635A;
+}
+
+.input::placeholder:focus {
+    color: #8C635A;
+}
+
+.input:focus {
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.input:hover {
+    transform: scale(1.02);
+}
+
+.bottom_margin {
+    margin-bottom: .6rem;
+}
+
+.button_section {
+    border: none;
+    border-radius: 30px;
+    padding: .8rem 1.5rem;
+    background-color: #A0DBF2;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.button_section:hover {
+    background-color: #A8E6FC;
+    transform: scale(1.1);
+}
+
+
+@media screen and (min-width: 900px) {
+    .top_nav_bar {
+        display: none;
+    }
+
+    .account_section_container {
+        width: 100%;
+        margin: 1rem 0 4.8rem 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .left_nav_bar {
+        width: 20%;
+        display: inline-block;
+        margin: 1rem;
+        padding: 2rem 0 2rem 2rem;
+    }
+
+    .left_nav_bar ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .left_nav_bar a {
+        text-decoration: none;
+        color: #8C635A;
+    }
+
+    .left_nav_bar a:hover {
+        color: #A0DBF2;
+    }
+
+    .left_nav_bar .main_page {
+        border-bottom: 1.5px solid #A0DBF2;
+    }
+
+    .left_nav_bar ul li:first-child {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #593C39;
+
+    }
+
+    .main_section {
+        width: 75%;
+        margin: 4.5rem 0 0 0;
+        justify-content: flex-start;
+    }
+
+    .password_info_container {
+        margin: 2rem;
+    }
+}

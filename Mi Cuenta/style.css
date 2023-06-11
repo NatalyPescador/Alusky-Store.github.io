@@ -47,9 +47,11 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 900px) {
+/*Vacio en la parte inferior del footer*/
+
+@media screen and (min-width: 1600px) {
     .my_account {
-        height: 58.8vh;
+        margin-top: 3.2rem;
     }
 
 }
