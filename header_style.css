@@ -111,17 +111,24 @@ header {
     transform: scale(1.1);
 }
 
+.Whatsapp_Fixed {
+    width: 50px;
+    position: fixed;
+    bottom: 1.8rem;
+    right: 1.8rem;
+}
+
 /*@media screen and (min-width:700px) and (max-width: 899)*/
 
 @media (max-width: 899px) {
     .nav_list {
         position: fixed;
-        top: 5rem;
+        top: 6rem;
         right: -100%;
-        width: 100%;
-        height: max-content;
-        padding: .5rem .5rem 5rem 0;
-        background-color: #593C39;
+        width: max-content;
+        height: 100vh;
+        padding: .5rem 1.2rem;
+        background-color: #f5f5f5;
         display: flex;
         flex-direction: column;
         transition: all .8s;
@@ -132,8 +139,9 @@ header {
     }
 
     .nav_list .close_button {
+        margin-right: -.5rem;
         border: none;
-        background-color: #593C39;
+        background-color: #f5f5f5;
         justify-self: flex-end;
         align-self: flex-end;
         cursor: pointer;
@@ -145,16 +153,16 @@ header {
     }
 
     .nav_list .close_button img {
-        width: 1.5rem;
+        width: 1.3rem;
     }
 
     .nav_list .link_account {
-        color: #ffffff;
+        color: #593C39;
         text-decoration: none;
         font-size: 1.2rem;
         width: 100%;
         text-align: center;
-        padding-top: 2.5rem;
+        padding-top: 1.5rem;
         margin-bottom: 1.3rem;
     }
 
@@ -173,7 +181,7 @@ header {
     
     .nav_list ul li a {
         text-decoration: none;
-        color: #ffffff;
+        color: #593C39;
         font-size: 1.2rem;
         transition: all .1s;
     }
@@ -185,6 +193,11 @@ header {
     
     .line__bar {
         visibility: hidden;
+    }
+
+    .Whatsapp_Fixed {
+        bottom: .8rem;
+        right: .8rem;
     }
 }
 
