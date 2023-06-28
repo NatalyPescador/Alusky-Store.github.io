@@ -137,6 +137,10 @@
     gap: 5px;
 }
 
+.underlined_link {
+    border-bottom: 1px solid #A0DBF2;
+}
+
 @media (max-width: 899px) {
     .filter_container {
         position: fixed;

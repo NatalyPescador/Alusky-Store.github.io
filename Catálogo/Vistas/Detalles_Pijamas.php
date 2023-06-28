@@ -2,9 +2,17 @@
 <?php
 
 include "../Data Access Object (DAO)/metodosDAO.php";
+$codigo=$_REQUEST["codigo"];
 
 $objMetodos = new MetodosDAO();
-$lista = $objMetodos->ListarAccesorios();
+$lista = $objMetodos->ListarPijamasCod($codigo);
+
+foreach ($lista as $row) {
+    $nombre=$row[1];
+    $precio=$row[2];
+    $detalle=$row[3];
+    $imagen=$row[4];
+}
 
 ?>
 <html lang="en">
@@ -63,43 +71,25 @@ $lista = $objMetodos->ListarAccesorios();
         <script src="../../showMenu.js"></script>
     </header>
     <main>
-        <button type="button" class="filter_button filter_menu" id="filter_menu">
-            <img src="../../Iconos/filter.png" alt="menu desplegable" class="filter_icon">
+        <button type="button" class="back_button" onclick="location.href='Pijamas.php'">
+            <img src="../../Iconos/back.png" class="back_icon">
+            Regresar
         </button>
-        <div class="root_container">
-            <div class="filter_container" id="filter_container">
-                <button type="button" class="close_btn" id="close_btn">
-                    <img src="../../Iconos/close.png" class="close_icon">
-                </button>
-                <ul class="catalog_menu">
-                    <li><a href="Catalogo.php">Todos los productos</a></li>
-                    <li><a href="Buzos.php">Buzos</a></li>
-                    <li><a href="Camisetas.php">Camisetas</a></li>
-                    <li><a href="Sudaderas.php">Sudaderas</a></li>
-                    <li><a href="Pijamas.php">Pijamas</a></li>
-                    <li><a href="RopaN.php">Ropa Niños</a></li>
-                    <li><a href="Accesorios.php" class="underlined_link">Accesorios</a></li>
-                </ul>
+        <div class="product_details_container">
+            <div class="product_img_container">
+                <div><img src="../Productos Alusky/<?php echo $imagen;?>" class="product_img"></div>
             </div>
-            <script src="../showFilterContainer.js"></script>
-            <div class="catalog_container">
-                <?php
-                foreach ($lista as $reg) {
-                    ?>
-                <div class="product_container">
-                    <img src="../Productos Alusky/<?php echo $reg[4];?>" class="products">
-                    <button type="button" onclick="enviar(<?php echo $reg[0];?>)" class="product_button">Agregar</button>
+            <div class="info_container">
+                <div><?php echo $nombre; ?></div>
+                <div><?php echo $detalle; ?></div>
+                <div><?php echo $precio; ?></div>
+                <div><label>Ingrese Cantidad:</label><input type="number" min="1" max="100" value="1" name="cantidad" class="number"></div>
+                <div class="buttons_container">
+                    <button type="button" id="cerrar" class="product_button">Cerrar</button>
+                    <button type="button" class="product_button">Agregar al carrito</button>
                 </div>
-                <?php
-                }
-                ?>
             </div>
         </div>
     </main>
-    <script>
-        function enviar(codigo) {
-            location.href="Detalles_Accesorios.php?codigo=" + codigo;
-        }
-    </script>
 </body>
 </html>

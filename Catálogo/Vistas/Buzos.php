@@ -4,7 +4,7 @@
 include "../Data Access Object (DAO)/metodosDAO.php";
 
 $objMetodos = new MetodosDAO();
-$lista = $objMetodos->ListarAccesorios();
+$lista = $objMetodos->ListarBuzos();
 
 ?>
 <html lang="en">
@@ -73,12 +73,12 @@ $lista = $objMetodos->ListarAccesorios();
                 </button>
                 <ul class="catalog_menu">
                     <li><a href="Catalogo.php">Todos los productos</a></li>
-                    <li><a href="Buzos.php">Buzos</a></li>
+                    <li><a href="Buzos.php" class="underlined_link">Buzos</a></li>
                     <li><a href="Camisetas.php">Camisetas</a></li>
                     <li><a href="Sudaderas.php">Sudaderas</a></li>
                     <li><a href="Pijamas.php">Pijamas</a></li>
                     <li><a href="RopaN.php">Ropa Niños</a></li>
-                    <li><a href="Accesorios.php" class="underlined_link">Accesorios</a></li>
+                    <li><a href="Accesorios.php">Accesorios</a></li>
                 </ul>
             </div>
             <script src="../showFilterContainer.js"></script>
@@ -98,7 +98,7 @@ $lista = $objMetodos->ListarAccesorios();
     </main>
     <script>
         function enviar(codigo) {
-            location.href="Detalles_Accesorios.php?codigo=" + codigo;
+            location.href="Detalles_Buzos.php?codigo=" + codigo;
         }
     </script>
 </body>

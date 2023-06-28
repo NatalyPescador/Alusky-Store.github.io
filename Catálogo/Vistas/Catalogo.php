@@ -69,12 +69,12 @@ $lista=$_SESSION["lista"];
                     <img src="../../Iconos/close.png" class="close_icon">
                 </button>
                 <ul class="catalog_menu">
-                    <li><a href="Catalogo.php">Todos los productos</a></li>
-                    <li><a href="#">Buzos</a></li>
-                    <li><a href="#">Camisetas</a></li>
-                    <li><a href="#">Sudaderas</a></li>
-                    <li><a href="#">Pijamas</a></li>
-                    <li><a href="#">Ropa Niños</a></li>
+                    <li><a href="Catalogo.php" class="underlined_link">Todos los productos</a></li>
+                    <li><a href="Buzos.php">Buzos</a></li>
+                    <li><a href="Camisetas.php">Camisetas</a></li>
+                    <li><a href="Sudaderas.php">Sudaderas</a></li>
+                    <li><a href="Pijamas.php">Pijamas</a></li>
+                    <li><a href="RopaN.php">Ropa Niños</a></li>
                     <li><a href="Accesorios.php">Accesorios</a></li>
                 </ul>
             </div>
