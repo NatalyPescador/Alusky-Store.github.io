@@ -66,6 +66,7 @@
                         </div>
                         <input id="name_sign-up" type="text" placeholder="Nombre" name="name">
                         <input id="email_sign-up" type="email" placeholder="Correo electrónico" name="email">
+                        <input id="confirm_email_sign-up" type="email" placeholder="Confirme correo electrónico" name="validar_email">
                         <input id="password_sign-up" type="password" placeholder="Contraseña" name="password">
                         <?php
                         include("../Iniciar Sesion/conexionBBDD.php");
