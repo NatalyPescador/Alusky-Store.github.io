@@ -55,7 +55,7 @@
         <main>
             <section class="forgot_password">
                 <div class="forgot_password_container">
-                    <form class="forgot_password_form" action="enviar_contrasena.php" method="post">
+                    <form class="forgot_password_form" method="post" action="correoContrasena.php">
                         <div class="forgot_password_icons">
                             <img src="../Iconos/padlock.png" class="padlock_icon">
                             <img src="../Imagenes/LOGO.jpg" class="logo_icon" alt="Logo de Alusky Store">
