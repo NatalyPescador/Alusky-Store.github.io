@@ -53,7 +53,7 @@ $lista = $objMetodos->ListarRopaN();
                         <li><a href="../../index.html">Inicio</a></li>
                         <li><a href="../index.html">Catálogo</a></li>
                         <li><a href="../../Accesorios/index.html">Accesorios</a></li>
-                        <li><a href="../../Personalizar/index.html">Personalizar</a></li>
+                        <!-- <li><a href="../../Personalizar/index.html">Personalizar</a></li> -->
                         <li><a href="../../Preguntas Frecuentes/index.html">Preguntas Frecuentes</a></li>
                     </ul> 
                     <hr class="line__bar"> 
@@ -95,6 +95,7 @@ $lista = $objMetodos->ListarRopaN();
                 ?>
             </div>
         </div>
+        <a href="https://wa.me/3245045027/?text=Me%20gustaría%20obtener%20más%20información%20acerca%20de%20sus%20productos"  class="Whatsapp_Link" target="_blank"><img src="../../Iconos/WhatsappFixed.png" class="Whatsapp_Fixed"></a>
     </main>
     <script>
         function enviar(codigo) {
