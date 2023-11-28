@@ -1,4 +1,5 @@
 <?php
+    require_once("generarContrasena.php");
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
@@ -8,24 +9,35 @@
 
     $mail = new PHPMailer(true);
 
+
     if(isset($_POST['recuperar_contrasena'])){
 
         $correo = $_POST['correo'];
 
+        $conexion=new mysqli("localhost", "root", "", "catalogoalusky");
+
+        $sql=$conexion->query("SELECT Nombre FROM usuarios WHERE Correo='$correo'");
+        $datos = $sql->fetch_object();
+        $usuario = $datos->Nombre;
+
+        $contrasenaTemporal = generarContrasenaAleatoria();
+        $contrasenaTemporalEncriptada = password_hash($contrasenaTemporal, PASSWORD_BCRYPT);
+        $sqlcon=$conexion->query("UPDATE usuarios SET Contra='$contrasenaTemporalEncriptada' WHERE Correo='$correo'");
+        
         try {
             //Server settings
-            $mail->SMTPDebug = 2; //SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-            $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'enios05@hotmail.com';                     //SMTP username
-            $mail->Password   = 'N4rut0*98.';                               //SMTP password
-            $mail->SMTPSecure = 'tsl'; //PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->SMTPDebug = 0; //SMTP::DEBUG_SERVER;                      
+            $mail->isSMTP();                                            
+            $mail->Host       = 'smtp-mail.outlook.com';                    
+            $mail->SMTPAuth   = true;                                   
+            $mail->Username   = 'soportealusky@hotmail.com';                     
+            $mail->Password   = 'AluskyStore';                              
+            $mail->SMTPSecure = 'tsl'; //PHPMailer::ENCRYPTION_SMTPS;            
+            $mail->Port       = 587;
 
             //Recipients
-            $mail->setFrom('enios05@hotmail.com', 'Johan');
-            $mail->addAddress($correo, 'Johan');     //Add a recipient
+            $mail->setFrom('soportealusky@hotmail.com', 'Alusky');
+            $mail->addAddress($correo, $usuario);     //Add a recipient
             //$mail->addAddress('ellen@example.com');               //Name is optional
             //$mail->addReplyTo('info@example.com', 'Information');
             //$mail->addCC('cc@example.com');
@@ -36,15 +48,20 @@
             //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
             //Content
-            $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Recuperacion contraseña';
-            $mail->Body    = 'Prueba de correo para recuperar contraseña <b>in bold!</b>';
-            //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->isHTML(true);
+            $mail->Subject = 'Recuperacion clave ingreso Alusky Store';
+            $mail->Body    = 'Estimado '.$usuario.',<br><br>
+            Hemos recibido una solicitud para restablecer su contraseña de acceso a Alusky Store.<br><br>
+            Para su seguridad, hemos generado una contraseña temporal que le permitirá acceder a su cuenta.<br><br>           
+            Su contraseña temporal es: '.$contrasenaTemporal.'<br><br>          
+            Recomendamos que cambie esta contraseña temporal por una nueva y segura tan pronto como inicie sesión.<br><br>
+            cordialmente<br>
+            Equipo Alusky';
 
             $mail->send();
-            echo 'Message has been sent';
+            echo 'Se ha enviado un mensaje al correo electronico por favor';
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            echo "El mensaje no se ha podido enviar: {$mail->ErrorInfo}";
         }
     }
 
