@@ -59,7 +59,7 @@
             Equipo Alusky';
 
             $mail->send();
-            echo 'Se ha enviado un mensaje al correo electronico por favor';
+            header('Location: ../Iniciar Sesion/login.php');
         } catch (Exception $e) {
             echo "El mensaje no se ha podido enviar: {$mail->ErrorInfo}";
         }

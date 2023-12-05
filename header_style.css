@@ -245,6 +245,7 @@ header {
         border-radius: 50px;
         cursor: pointer;
         transition: all 0.3s ease 0s;
+        text-decoration: none;
         }
 
         .header_container .right_header .log_in_button:hover,

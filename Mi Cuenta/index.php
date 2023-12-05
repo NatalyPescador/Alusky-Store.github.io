@@ -1,3 +1,10 @@
+<?php
+session_start();
+if ($_SESSION['login'] == false) {
+    header("location:../Iniciar Sesion/login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -25,7 +32,14 @@
                             <input type="text" placeholder="Buscar en Alusky" class="search_bar">
                         </div>
                         <div class="right_header">
-                            <button onclick="location.href='../Iniciar Sesion/index.html'" class="sign_in_button">Cerrar Sesion</button>
+                            <?php
+                                if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['cerrarSesion'])) {
+                                    $_SESSION['login'] = false;
+                                    header("location:../Iniciar Sesion/index.html");
+                                    exit();
+                                }
+                            ?>
+                            <a class="sign_in_button" href="?cerrarSesion">Cerrar Sesion</a>
                             <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='../Carrito de Compras/index.html'">
                                 <img src="../Iconos/Carrito de Compras.png">
                             </button>
@@ -106,7 +120,7 @@
                             <p>Cambia la contraseña asociada a tu cuenta</p>
                         </div>
                         <div class="icon_access">
-                            <a href="Opciones de Cuenta/Cambiar Contraseña/index.html">
+                            <a href="Opciones de Cuenta/Cambiar Contraseña/index.php">
                                 <img src="../Iconos/right-arrow.png" alt="access_icon">
                             </a>
                         </div>

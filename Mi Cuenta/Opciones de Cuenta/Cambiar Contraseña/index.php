@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -73,11 +76,21 @@
                     </div>
                     <div class="main_section">
                         <div class="password_info_container">
-                            <label for="current_password" class="label">Ingrese su contraseña actual</label>
-                            <input type="password" name="current_password" id="current_password" class="input bottom_margin">
-                            <label for="new_password" class="label">Ingrese su nueva contraseña</label>
-                            <input type="password" name="new_password" id="new_password" class="input bottom_margin">
-                            <button class="button_section">Crear contraseña</button>
+                            <form class="password_info_container" action="cambiarContrasena.php" method="post">
+                                <label for="current_password" class="label">Ingrese su contraseña actual</label>
+                                <input type="password" name="current_password" id="current_password" class="input bottom_margin">
+                                <label for="new_password" class="label">Ingrese su nueva contraseña</label>
+                                <input type="password" name="new_password" id="new_password" class="input bottom_margin">
+                                <label for="new_password" class="label">Confirme su nueva contraseña</label>
+                                <input type="password" name="confirm_new_password" id="confirm_new_password" class="input bottom_margin">
+                                <?php
+                                    if (isset($_SESSION['msg'])) {
+                                        echo "<div class='alert_message'>{$_SESSION['msg']}</div>";
+                                        unset($_SESSION['msg']);
+                                    }
+                                ?>
+                                <button class="button_section" name="cambiar_contrasena">Cambiar contraseña</button>
+                            </form>
                         </div>
                     </div>   
                 </div>
