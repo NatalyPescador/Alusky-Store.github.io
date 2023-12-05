@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+session_start();
 
 include "../Data Access Object (DAO)/metodosDAO.php";
 $cod=$_REQUEST["cod"];
@@ -44,7 +45,7 @@ foreach ($lista as $row) {
                     <div class="right_header">
                         <button  onclick="location.href='../../Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
                         <button onclick="location.href='../../Registrarse/index.html'" class="sign_in_button">Registrarse</button>
-                        <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='../../Carrito de Compras/index.html'">
+                        <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='Carrito.php'">
                             <img src="../../Iconos/Carrito de Compras.png">
                         </button>
                         <button type="button" class="nav_bar_button dropdown_menu" id="dropdown_menu">
@@ -79,18 +80,38 @@ foreach ($lista as $row) {
             <div class="product_img_container">
                 <div><img src="../Productos Alusky/<?php echo $imagen;?>" class="product_img"></div>
             </div>
-            <div class="info_container">
-                <div><?php echo $nombre; ?></div>
-                <div><?php echo $detalle; ?></div>
-                <div><?php echo $precio; ?></div>
-                <div><label>Ingrese Cantidad:</label><input type="number" min="1" max="100" value="1" name="cantidad" class="number"></div>
-                <div class="buttons_container">
-                    <button type="button" id="cerrar" class="product_button">Cerrar</button>
-                    <button type="button" class="product_button">Agregar al carrito</button>
+            <form action="Detalle.php?cod=<?php echo $cod; ?>" method="post">
+                <div class="info_container">
+                    <label for="nombre"><?php echo $nombre; ?></label>    
+                    <input type="hidden" name="nombre" value="<?php echo $nombre; ?>">
+
+                    <label for="detalle"><?php echo $detalle; ?></label>
+                    <input type="hidden" name="detalle" value="<?php echo $detalle; ?>">
+
+                    <label for="precio"><?php echo $precio; ?></label>
+                    <input type="hidden" name="precio" value="<?php echo $precio; ?>">
+
+                    <div><label>Ingrese Cantidad:</label><input type="number" min="1" max="100" value="1" name="cantidad" class="number"></div>
+                    <input type="submit" class="product_button" name="agregar" value="Agregar al carrito">
                 </div>
-            </div>
+            </form>
         </div>
         <a href="https://wa.me/3245045027/?text=Me%20gustaría%20obtener%20más%20información%20acerca%20de%20sus%20productos"  class="Whatsapp_Link" target="_blank"><img src="../../Iconos/WhatsappFixed.png" class="Whatsapp_Fixed"></a>
     </main>
+    <?php
+
+        if(isset($_REQUEST["agregar"])) {
+            $producto = $_REQUEST["nombre"];
+            $cantidad = $_REQUEST["cantidad"];
+            $precio = $_REQUEST["precio"];
+
+            $_SESSION["carrito"][$producto]["cantidad"] = $cantidad;
+            $_SESSION["carrito"][$producto]["precio"] = $precio;
+
+            echo "<script>alert('$producto agregado con éxito al carrito de compras')</script>";
+            $_SESSION['url'] = "Detalle.php?cod=<?php echo $cod; ?>";
+}
+
+?>
 </body>
 </html>

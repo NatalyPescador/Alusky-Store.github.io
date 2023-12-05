@@ -33,7 +33,7 @@ $lista=$_SESSION["lista"];
                     <div class="right_header">
                         <button  onclick="location.href='../../Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
                         <button onclick="location.href='../../Registrarse/index.html'" class="sign_in_button">Registrarse</button>
-                        <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='../../Carrito de Compras/index.html'">
+                        <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='Carrito.php'">
                             <img src="../../Iconos/Carrito de Compras.png">
                         </button>
                         <button type="button" class="nav_bar_button dropdown_menu" id="dropdown_menu">
