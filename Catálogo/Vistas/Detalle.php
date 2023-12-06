@@ -69,7 +69,7 @@ foreach ($lista as $row) {
                 </div>
             </div>
         </nav>
-        <script src="../../showMenu.js"></script>
+        <scrip src="../../showMenu.js"></script>
     </header>
     <main>
         <button type="button" class="back_button" onclick="location.href='../Vistas/Catalogo.php'">
@@ -80,38 +80,47 @@ foreach ($lista as $row) {
             <div class="product_img_container">
                 <div><img src="../Productos Alusky/<?php echo $imagen;?>" class="product_img"></div>
             </div>
-            <form action="Detalle.php?cod=<?php echo $cod; ?>" method="post">
-                <div class="info_container">
-                    <label for="nombre"><?php echo $nombre; ?></label>    
-                    <input type="hidden" name="nombre" value="<?php echo $nombre; ?>">
-
-                    <label for="detalle"><?php echo $detalle; ?></label>
-                    <input type="hidden" name="detalle" value="<?php echo $detalle; ?>">
-
-                    <label for="precio"><?php echo $precio; ?></label>
-                    <input type="hidden" name="precio" value="<?php echo $precio; ?>">
-
-                    <div><label>Ingrese Cantidad:</label><input type="number" min="1" max="100" value="1" name="cantidad" class="number"></div>
-                    <input type="submit" class="product_button" name="agregar" value="Agregar al carrito">
+            <div class="right_info_container">
+                <div class="top_info_container">
+                    <?php
+        
+                        if(isset($_REQUEST["agregar"])) {
+                            $producto = $_REQUEST["nombre"];
+                            $cantidad = $_REQUEST["cantidad"];
+                            $precio = $_REQUEST["precio"];
+                            $imagen = $_REQUEST["imagen"];
+        
+                            $_SESSION["carrito"][$producto]["imagen"] = $imagen;
+                            $_SESSION["carrito"][$producto]["cantidad"] = $cantidad;
+                            $_SESSION["carrito"][$producto]["precio"] = $precio;
+        
+                            echo "Producto agregado con éxito al carrito de compras";
+                        }
+        
+                    ?>
                 </div>
-            </form>
+                <div class="form_info_container">
+                    <form action="Detalle.php?cod=<?php echo $cod; ?>" method="post">
+                        <div class="info_container">
+                            <input type="hidden" name="imagen" value="<?php echo $imagen;?>">
+        
+                            <label for="nombre"><?php echo $nombre; ?></label>    
+                            <input type="hidden" name="nombre" value="<?php echo $nombre; ?>">
+        
+                            <label for="detalle"><?php echo $detalle; ?></label>
+                            <input type="hidden" name="detalle" value="<?php echo $detalle; ?>">
+        
+                            <label for="precio"><?php echo number_format($precio, 0, '.', '.') . " COP"; ?></label>
+                            <input type="hidden" name="precio" value="<?php echo $precio; ?>">
+        
+                            <div><label>Ingrese Cantidad:</label><input type="number" min="1" max="100" value="1" name="cantidad" class="number"></div>
+                            <input type="submit" class="product_button" name="agregar" value="Agregar al carrito">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
         <a href="https://wa.me/3245045027/?text=Me%20gustaría%20obtener%20más%20información%20acerca%20de%20sus%20productos"  class="Whatsapp_Link" target="_blank"><img src="../../Iconos/WhatsappFixed.png" class="Whatsapp_Fixed"></a>
     </main>
-    <?php
-
-        if(isset($_REQUEST["agregar"])) {
-            $producto = $_REQUEST["nombre"];
-            $cantidad = $_REQUEST["cantidad"];
-            $precio = $_REQUEST["precio"];
-
-            $_SESSION["carrito"][$producto]["cantidad"] = $cantidad;
-            $_SESSION["carrito"][$producto]["precio"] = $precio;
-
-            echo "<script>alert('$producto agregado con éxito al carrito de compras')</script>";
-            $_SESSION['url'] = "Detalle.php?cod=<?php echo $cod; ?>";
-}
-
-?>
 </body>
 </html>

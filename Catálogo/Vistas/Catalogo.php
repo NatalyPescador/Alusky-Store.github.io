@@ -85,7 +85,7 @@ $lista=$_SESSION["lista"];
                     ?>
                 <div class="product_container">
                     <img src="../Productos Alusky/<?php echo $reg[4];?>" class="products">
-                    <button type="button" onclick="enviar(<?php echo $reg[0];?>)" class="product_button">Agregar</button>
+                    <button type="button" onclick="enviar(<?php echo $reg[0];?>)" class="product_button">Detalles</button>
                 </div>
                 <?php
                 }
