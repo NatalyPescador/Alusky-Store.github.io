@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -65,7 +66,7 @@
                         <input id="password_sign-in" type="password" placeholder="Contraseña" name="password">
                             <?php
                             include "conexionBBDD.php";
-                            include "controlador.php";
+                            //include "controlador.php";
                             ?>
                         <div class="remember_me">
                             <label for="remember_me_label">Recuerdame</label>
