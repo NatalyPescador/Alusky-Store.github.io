@@ -4,7 +4,6 @@ if ($_SESSION['login'] == false) {
     header("location:../Iniciar Sesion/login.php");
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -76,7 +75,7 @@ if ($_SESSION['login'] == false) {
                             <p>Ver, editar y ordenar tus diseños guardados</p>
                         </div>
                         <div class="icon_access">
-                            <a href="Opciones de Cuenta/Mis Diseños/index.html">
+                            <a href="Opciones de Cuenta/Mis Diseños/index.php">
                                 <img src="../Iconos/right-arrow.png" alt="access_icon">
                             </a>
                         </div>
@@ -87,7 +86,7 @@ if ($_SESSION['login'] == false) {
                             <p>Ver y rastrear tus pedidos anteriores</p>
                         </div>
                         <div class="icon_access">
-                            <a href="Opciones de Cuenta/Historial de Pedidos/index.html">
+                            <a href="Opciones de Cuenta/Historial de Pedidos/index.php">
                                 <img src="../Iconos/right-arrow.png" alt="access_icon">
                             </a>
                         </div>
@@ -98,7 +97,7 @@ if ($_SESSION['login'] == false) {
                             <p>Ver y borrar tus imágenes subidas</p>
                         </div>
                         <div class="icon_access">
-                            <a href="Opciones de Cuenta/Mis Imagenes/index.html">
+                            <a href="Opciones de Cuenta/Mis Imagenes/index.php">
                                 <img src="../Iconos/right-arrow.png" alt="access_icon">
                             </a>
                         </div>
@@ -109,7 +108,7 @@ if ($_SESSION['login'] == false) {
                             <p>Actualiza el nombre y el correo electrónico asociado a tu cuenta</p>
                         </div>
                         <div class="icon_access">
-                            <a href="Opciones de Cuenta/Información de Cuenta/index.html">
+                            <a href="Opciones de Cuenta/Información de Cuenta/index.php">
                                 <img src="../Iconos/right-arrow.png" alt="access_icon">
                             </a>
                         </div>
@@ -131,7 +130,7 @@ if ($_SESSION['login'] == false) {
                             <p>Agrega, edita o borra tus direcciones de entrega</p>
                         </div>
                         <div class="icon_access">
-                            <a href="Opciones de Cuenta/Direcciones/index.html">
+                            <a href="Opciones de Cuenta/Direcciones/index.php">
                                 <img src="../Iconos/right-arrow.png" alt="access_icon">
                             </a>
                         </div>

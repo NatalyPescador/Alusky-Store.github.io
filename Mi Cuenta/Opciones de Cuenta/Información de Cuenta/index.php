@@ -1,3 +1,9 @@
+<?php
+session_start();
+if ($_SESSION['login'] == false) {
+    header("location:../Iniciar Sesion/login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -57,13 +63,13 @@
                 <div class="account_section_container">
                     <div class="left_nav_bar">
                         <ul class="left_list">
-                            <li><a href="../../index.html">Mi Cuenta</a></li>
-                            <li><a href="../Mis Diseños/index.html">Mis Diseños</a></li>
-                            <li><a href="../Historial de Pedidos/index.html">Historial de pedidos</a></li>
-                            <li><a href="../Mis Imagenes/index.html">Mis Imagenes</a></li>
-                            <li><a href="index.html" class="main_page">Información de la cuenta</a></li>
-                            <li><a href="../Cambiar Contraseña/index.html">Cambiar contraseña</a></li>
-                            <li><a href="../Direcciones/index.html">Tus direcciones</a></li>
+                            <li><a href="../../index.php">Mi Cuenta</a></li>
+                            <li><a href="../Mis Diseños/index.php">Mis Diseños</a></li>
+                            <li><a href="../Historial de Pedidos/index.php">Historial de pedidos</a></li>
+                            <li><a href="../Mis Imagenes/index.php">Mis Imagenes</a></li>
+                            <li><a href="index.php" class="main_page">Información de la cuenta</a></li>
+                            <li><a href="../Cambiar Contraseña/index.php">Cambiar contraseña</a></li>
+                            <li><a href="../Direcciones/index.php">Tus direcciones</a></li>
                             <li><a href="../../../Iniciar Sesion/index.html">Cerrar sesión</a></li>
                         </ul>
                     </div>
