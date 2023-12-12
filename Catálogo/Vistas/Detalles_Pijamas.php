@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+session_start();
 
 include "../Data Access Object (DAO)/metodosDAO.php";
 $codigo=$_REQUEST["codigo"];
@@ -44,7 +45,7 @@ foreach ($lista as $row) {
                     <div class="right_header">
                         <button  onclick="location.href='../../Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
                         <button onclick="location.href='../../Registrarse/index.html'" class="sign_in_button">Registrarse</button>
-                        <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='../../Carrito de Compras/index.html'">
+                        <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='Carrito.php'">
                             <img src="../../Iconos/Carrito de Compras.png">
                         </button>
                         <button type="button" class="nav_bar_button dropdown_menu" id="dropdown_menu">
@@ -79,14 +80,43 @@ foreach ($lista as $row) {
             <div class="product_img_container">
                 <div><img src="../Productos Alusky/<?php echo $imagen;?>" class="product_img"></div>
             </div>
-            <div class="info_container">
-                <div><?php echo $nombre; ?></div>
-                <div><?php echo $detalle; ?></div>
-                <div><?php echo $precio; ?></div>
-                <div><label>Ingrese Cantidad:</label><input type="number" min="1" max="100" value="1" name="cantidad" class="number"></div>
-                <div class="buttons_container">
-                    <button type="button" id="cerrar" class="product_button">Cerrar</button>
-                    <button type="button" class="product_button">Agregar al carrito</button>
+            <div class="right_info_container">
+                <div class="top_info_container">
+                    <?php
+        
+                        if(isset($_REQUEST["agregar"])) {
+                            $producto = $_REQUEST["nombre"];
+                            $cantidad = $_REQUEST["cantidad"];
+                            $precio = $_REQUEST["precio"];
+                            $imagen = $_REQUEST["imagen"];
+        
+                            $_SESSION["carrito"][$producto]["imagen"] = $imagen;
+                            $_SESSION["carrito"][$producto]["cantidad"] = $cantidad;
+                            $_SESSION["carrito"][$producto]["precio"] = $precio;
+        
+                            echo "<p>Producto agregado con éxito al carrito de compras</p>";
+                        }
+        
+                    ?>
+                </div>
+                <div class="form_info_container">
+                    <form action="Detalles_Pijamas.php?codigo=<?php echo $codigo; ?>" method="post">
+                        <div class="info_container">
+                            <input type="hidden" name="imagen" value="<?php echo $imagen;?>">
+        
+                            <label for="nombre"><?php echo $nombre; ?></label>    
+                            <input type="hidden" name="nombre" value="<?php echo $nombre; ?>">
+        
+                            <label for="detalle"><?php echo $detalle; ?></label>
+                            <input type="hidden" name="detalle" value="<?php echo $detalle; ?>">
+        
+                            <label for="precio"><?php echo number_format($precio, 0, '.', '.') . " COP"; ?></label>
+                            <input type="hidden" name="precio" value="<?php echo $precio; ?>">
+        
+                            <div><label>Ingrese Cantidad:</label><input type="number" min="1" max="100" value="1" name="cantidad" class="number"></div>
+                            <input type="submit" class="product_button" name="agregar" value="Agregar al carrito">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -94,7 +94,7 @@ foreach ($lista as $row) {
                             $_SESSION["carrito"][$producto]["cantidad"] = $cantidad;
                             $_SESSION["carrito"][$producto]["precio"] = $precio;
         
-                            echo "Producto agregado con éxito al carrito de compras";
+                            echo "<p>Producto agregado con éxito al carrito de compras</p>";
                         }
         
                     ?>
