@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script src="https://kit.fontawesome.com/b408879b64.js"></script>
         <title>Alusky Store</title>
     </head>
     <body>
@@ -22,7 +23,44 @@
                             <a href="index.html" class="logo_img">
                                 <img src="Imagenes/LOGO.jpg" alt="Logo de Alusky Store">
                             </a>
-                            <input type="text" placeholder="Buscar en Alusky" class="search_bar">
+                            <!-- <input type="text" placeholder="Buscar en Alusky" class="search_bar"
+                             id="buscar" name="buscar" > -->
+                             <style>
+                                .angel {
+                                    position: relative;
+                                
+                                }
+                                
+                                .angel2 {
+                                    padding: 10px;
+                                    padding-right: 35px;
+                                    border-radius: 5px 0 0 5px;
+                                    font-size: 1rem;
+                                }
+                                .rivera {
+                                    background-color: #593C39;
+                                    padding: 10px 15px;
+                                    position: absolute;
+                                    border: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    right: 0;
+                                    margin: auto;
+                                    border-radius: 0 5px 5px 0;
+                                    color: aliceblue;
+                                    cursor: pointer;
+                                }
+
+                                .rivera:hover{
+                                    background-color: rgba(0, 0, 0,0.2);
+                                }
+                             </style>
+                            <div class="angel">
+                                <input class="angel2" type="text" placeholder="Buscar..."> 
+                                <button class="rivera"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <!-- <input type="submit" name="buscar" id="buscar" value="buscar"> -->
+                            </div> 
+                            
                         </div>
                         <div class="right_header">
                             <button  onclick="location.href='Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
