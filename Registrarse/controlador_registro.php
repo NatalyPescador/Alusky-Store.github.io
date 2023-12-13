@@ -9,7 +9,7 @@ if (!empty($_POST["sigIn_button"])) {
         $contraseña=password_hash($_POST["password"], PASSWORD_BCRYPT);
 
         if ($correo == $confirmacionCorreo) {
-            $sql=$conexion->query("insert into usuarios (Nombre, Correo, Contra) values ('$nombre','$correo','$contraseña')");
+            $sql=$conexion->query("insert into usuarios (Nombre, Correo, Contra, id) values ('$nombre','$correo','$contraseña', 2)");
             if ($sql==1) {
                 echo "<div class='success_message'>Usuario registrado</div>";
             } else {
