@@ -70,10 +70,3 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 ?>
 
 
-// // Codigo para cerrar la sesion
-       
-       //     if (isset($_GET['cerrar_sesion'])) {
-       //         session_unset();
-       
-       //         session_destroy();
-       //     }

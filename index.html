@@ -25,7 +25,7 @@
                             </a>
                             <!-- <input type="text" placeholder="Buscar en Alusky" class="search_bar"
                              id="buscar" name="buscar" > -->
-                             <style>
+                             <!-- <style>
                                 .angel {
                                     position: relative;
                                 
@@ -54,13 +54,57 @@
                                 .rivera:hover{
                                     background-color: rgba(0, 0, 0,0.2);
                                 }
-                             </style>
-                            <div class="angel">
-                                <input class="angel2" type="text" placeholder="Buscar..."> 
-                                <button class="rivera"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                <!-- <input type="submit" name="buscar" id="buscar" value="buscar"> -->
-                            </div> 
-                            
+
+                                table, th, td{
+                                    border: 1px solid;
+                                }
+
+                                table{
+                                    width: 80%;
+                                    border-collapse: collapse;
+                                }
+
+                             </style> -->
+                            <!-- <form action="index.html" method="post">
+                                <div class="angel">
+                                    <input class="angel2" type="text" placeholder="Buscar..." name="buscar" id="buscar"> 
+                                    <button class="rivera"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                                    <!-- <input type="submit" name="buscar" id="buscar" value="buscar"> -->
+                                <!-- </div>
+                            </form> 
+                            <table>
+                                <thead>
+                                    <th>CodProducto</th>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Deatalles</th>
+                                    <th>Imagen</th>
+                                </thead>
+                                <tbody id="content">
+
+                                </tbody>
+                            </table> -->
+                            <!-- <script>
+                                getData()
+
+                                document,getElementById("campo").addEventListener("keyup", getData)
+
+                                function getData(){
+                                    let input = document.getElementById('buscar').value
+                                    let content= document.getElementById('content')
+                                    let url= "read.php";
+                                    let formaData= new FormData() 
+                                    formaData.append('buscar', input)
+
+                                    fetch(url,{
+                                        method: "POST",
+                                        body: formaData
+                                    }).then(Response.json())
+                                    .then(data=>{
+                                        content.innerHTML = data
+                                    }).catch(err=>console.log(err))
+                                }
+                            </script> -->
                         </div>
                         <div class="right_header">
                             <button  onclick="location.href='Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
