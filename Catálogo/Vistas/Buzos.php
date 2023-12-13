@@ -36,7 +36,7 @@ $lista = $objMetodos->ListarBuzos();
                     <div class="right_header">
                         <button  onclick="location.href='../../Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
                         <button onclick="location.href='../../Registrarse/index.html'" class="sign_in_button">Registrarse</button>
-                        <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='../../Carrito de Compras/index.html'">
+                        <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='Carrito.php'">
                             <img src="../../Iconos/Carrito de Compras.png">
                         </button>
                         <button type="button" class="nav_bar_button dropdown_menu" id="dropdown_menu">
@@ -53,7 +53,7 @@ $lista = $objMetodos->ListarBuzos();
                         <li><a href="../../index.html">Inicio</a></li>
                         <li><a href="../index.html">Catálogo</a></li>
                         <li><a href="../../Accesorios/index.html">Accesorios</a></li>
-                        <li><a href="../../Personalizar/index.html">Personalizar</a></li>
+                        <!-- <li><a href="../../Personalizar/index.html">Personalizar</a></li> -->
                         <li><a href="../../Preguntas Frecuentes/index.html">Preguntas Frecuentes</a></li>
                     </ul> 
                     <hr class="line__bar"> 
@@ -95,6 +95,7 @@ $lista = $objMetodos->ListarBuzos();
                 ?>
             </div>
         </div>
+        <a href="https://wa.me/3245045027/?text=Me%20gustaría%20obtener%20más%20información%20acerca%20de%20sus%20productos"  class="Whatsapp_Link" target="_blank"><img src="../../Iconos/WhatsappFixed.png" class="Whatsapp_Fixed"></a>
     </main>
     <script>
         function enviar(codigo) {

@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<?php
+<?php 
+session_start();
+ 
+if (isset($_REQUEST["vaciar"])) {
+    unset($_SESSION["carrito"]);
+    header("Location:Carrito.php");
+}
 
-include "../Data Access Object (DAO)/metodosDAO.php";
-
-$objMetodos = new MetodosDAO();
-$lista = $objMetodos->ListarCamisetas();
-
+if(isset($_REQUEST["item"])) {
+    $producto = $_REQUEST["item"];
+    unset($_SESSION["carrito"][$producto]);
+    header("Location:Carrito.php");
+}
 ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -63,44 +70,51 @@ $lista = $objMetodos->ListarCamisetas();
         <script src="../../showMenu.js"></script>
     </header>
     <main>
-        <button type="button" class="filter_button filter_menu" id="filter_menu">
-            <img src="../../Iconos/filter.png" alt="menu desplegable" class="filter_icon">
+        <button type="button" class="back_button" onclick="location.href='../Vistas/Catalogo.php'">
+            <img src="../../Iconos/back.png" class="back_icon">
+            Regresar
         </button>
-        <div class="root_container">
-            <div class="filter_container" id="filter_container">
-                <button type="button" class="close_btn" id="close_btn">
-                    <img src="../../Iconos/close.png" class="close_icon">
-                </button>
-                <ul class="catalog_menu">
-                    <li><a href="Catalogo.php">Todos los productos</a></li>
-                    <li><a href="Buzos.php">Buzos</a></li>
-                    <li><a href="Camisetas.php" class="underlined_link">Camisetas</a></li>
-                    <li><a href="Sudaderas.php">Sudaderas</a></li>
-                    <li><a href="Pijamas.php">Pijamas</a></li>
-                    <li><a href="RopaN.php">Ropa Niños</a></li>
-                    <li><a href="Accesorios.php">Accesorios</a></li>
-                </ul>
-            </div>
-            <script src="../showFilterContainer.js"></script>
-            <div class="catalog_container">
-                <?php
-                foreach ($lista as $reg) {
+        <div class="bill_main">
+            <div class="bill_container">
+                <h1 class="bill_title">Carrito de Compras</h1>
+                    <?php
+                        $totalCompra = 0;
+
+                        if(isset($_SESSION["carrito"])) {
+                            echo '<table class="bill_table">';
+                            echo '<tr>';
+                            echo '<th>Imagen</th>';
+                            echo '<th>Artículo</th>';
+                            echo '<th>Cantidad</th>';
+                            echo '<th>Precio Unitario</th>';
+                            echo '<th>Subtotal</th>';
+                            echo '<th>Borrar</th></tr>';
+
+                            foreach($_SESSION["carrito"] as $indice=>$arreglo) {
+                                if(isset($arreglo["imagen"])) {
+                                    echo "<tr><td><img src='../Productos Alusky/" . $arreglo["imagen"] . "' class='bill_images'></td>";
+                                }
+                                echo "<td>" . $indice . "</td>";
+                                $subtotalProducto = $arreglo["cantidad"] * $arreglo["precio"];
+                                $totalCompra += $subtotalProducto; 
+                                echo "<td>" . $arreglo["cantidad"] . "</td>";
+                                echo "<td>" . number_format($arreglo["precio"], 0, '.', '.') . " COP </td>"; 
+                                echo "<td>" . number_format($subtotalProducto, 0, '.', '.') . " COP </td>"; 
+                                echo "<td><a href='Carrito.php?item=$indice'><img src='../../Iconos/eliminar.png' class='bin_icon'></a></td></tr>";
+                            }
+
+                            echo "</table>";
+                            echo "<div class='total'><span class='span1'>Total de la compra</span> <span class='span2'>" . number_format($totalCompra, 0, '.', '.') . " COP</span></div>";
+                            echo '<div class="buttons_container"> <a href="carrito.php?vaciar=true" class="bill_buttons">Vaciar carrito</a>';
+                            echo '<input type="submit" name="compra" value="Continuar pedido" class="bill_buttons"></div>';
+
+                        } else {
+                            echo "El carrito está vacío";
+                        }
                     ?>
-                <div class="product_container">
-                    <img src="../Productos Alusky/<?php echo $reg[4];?>" class="products">
-                    <button type="button" onclick="enviar(<?php echo $reg[0];?>)" class="product_button">Agregar</button>
-                </div>
-                <?php
-                }
-                ?>
             </div>
         </div>
-        <a href="https://wa.me/3245045027/?text=Me%20gustaría%20obtener%20más%20información%20acerca%20de%20sus%20productos"  class="Whatsapp_Link" target="_blank"><img src="../../Iconos/WhatsappFixed.png" class="Whatsapp_Fixed"></a>
     </main>
-    <script>
-        function enviar(codigo) {
-            location.href="Detalles_Camisetas.php?codigo=" + codigo;
-        }
-    </script>
 </body>
 </html>
+

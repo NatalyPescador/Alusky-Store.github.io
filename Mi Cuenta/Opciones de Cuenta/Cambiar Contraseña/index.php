@@ -49,7 +49,7 @@ if ($_SESSION['login'] == false) {
                             <li><a href="../../../index.html">Inicio</a></li>
                             <li><a href="../../../Catálogo/index.html">Catálogo</a></li>
                             <li><a href="../../../Accesorios/index.html">Accesorios</a></li>
-                            <li><a href="../../../Personalizar/index.html">Personalizar</a></li>
+                            <!-- <li><a href="../../../Personalizar/index.html">Personalizar</a></li> -->
                             <li><a href="../../../Preguntas Frecuentes/index.html">Preguntas Frecuentes</a></li>
                         </ul> 
                         <hr class="line__bar"> 
