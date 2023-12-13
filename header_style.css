@@ -40,7 +40,7 @@ header {
 }
 
 .top_header .left_header {
-    width: 70%;
+    width: 60%;
     justify-content: flex-start;
 }
 
@@ -86,13 +86,15 @@ header {
 }
 
 .top_header .right_header {
-    width: 30%;
+    width: 20%;
     justify-content: flex-end;
 }
 
 .top_header .right_header .log_in_button,
 .top_header .right_header .sign_in_button {
     visibility: hidden;
+    width: 20%;
+    font-size: 11px;
 }
 
 .top_header .right_header img {
@@ -157,7 +159,7 @@ header {
     }
 
     .nav_list .link_account {
-        color: #593C39;
+        color: #17b6f5;
         text-decoration: none;
         font-size: 1.2rem;
         width: 100%;
@@ -182,7 +184,7 @@ header {
     .nav_list ul li a {
         text-decoration: none;
         color: #593C39;
-        font-size: 1.2rem;
+        font-size: 1rem;
         transition: all .1s;
     }
 
@@ -245,7 +247,6 @@ header {
         border-radius: 50px;
         cursor: pointer;
         transition: all 0.3s ease 0s;
-        text-decoration: none;
         }
 
         .header_container .right_header .log_in_button:hover,
@@ -287,7 +288,7 @@ header {
         .nav_list ul {
             display: flex;
             justify-content: space-around;
-            background-color: #ffffff;
+            background-color: #f5f0f0;
         }
         
         .nav_list ul li {

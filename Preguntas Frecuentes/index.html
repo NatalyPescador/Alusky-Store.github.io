@@ -4,13 +4,44 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../header_style.css">
+        <link rel="stylesheet" type="text/css" href="../footer_style.css">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../header_style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="../favicon.ico">
         <title>Alusky Store</title>
+
+
+        <!-- Bootstrap -->
+
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- Slick -->
+<link rel="stylesheet" type="text/css" href="css/slick.min.css">
+<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/templatemo.css">
+<link rel="stylesheet" href="css/custom.css">
+
+<!-- Load fonts style after rendering the layout styles -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+
+<!-- Load map styles -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+<!---->
+
+
+
+
+
+
+
     </head>
     <body>
         <header>
@@ -43,32 +74,131 @@
                             <li><a href="../index.html">Inicio</a></li>
                             <li><a href="../Catálogo/index.html">Catálogo</a></li>
                             <li><a href="../Accesorios/index.html">Accesorios</a></li>
-                            <!-- <li><a href="../Personalizar/index.html">Personalizar</a></li> -->
+                            <li><a href="../Personalizar/index.html">Personalizar</a></li>
                             <li><a href="index.html">Preguntas Frecuentes</a></li>
                         </ul> 
-                        <hr class="line__bar"> 
+                       
                     </div>
                 </div>
             </nav>
             <script src="../showMenu.js"></script>
         </header>
+
+<!-- INICIO SECTION -->
+
         <main>
             <section>
-                <div class="main_section_faq">
-                    <h2>Preguntas Frecuentes</h2>
+                <div class="main_section_faq bg-dark">
+                    <h1>Preguntas Frecuentes</h1>
                 </div>
             </section>
-            <div class="main">
-                <section>
-                    <div class="questions third_question">
-                        <h3>¿Cuál es el tiempo de producción para los artículos personalizados?</h3>
-                        <p>El tiempo de producción para los artículos personalizados puede variar dependiendo del volumen de trabajo y la complejidad del diseño. Por lo general, estimamos un tiempo de producción de 5 a 7 días hábiles. Sin embargo, te recomendamos contactarnos directamente para obtener una estimación más precisa.</p>
+
+            <section class="bg-info">
+
+              <div class="container ">
+            
+                <div class="row ">
+
+                    <div class="row featurette" >
+                      <div class="col-lg-12 p-5 my-2">
+                        <h1 class="h3 featurette-heading text-dark text-center">¡Trabajamos por brindarte un excelente servicio!
+                          <br><span class="h5 text-light"> Se abre este espacio para atender las sugerencias, quejas o reclamos sobre la gestión de la empresa.</span></h1>
+                    
+                      </div>            
+     
                     </div>
-                </section>
-                <section>
-                    <div class="questions fourth_question">
-                        <h3>¿Qué métodos de pago aceptan?</h3>
-                        <p>Aceptamos pagos mediante transferencia bancaria, depósito en efectivo y pagos en línea a través de plataformas como PayPal. Al confirmar tu pedido, te proporcionaremos todos los detalles necesarios para que puedas realizar el pago de manera segura y conveniente.</p>
+                </div>
+              </div> 
+          </section>
+
+
+
+
+<!-- Acordeon de Preguntas-->
+
+
+                    <div class="container p-5">
+                      <div id="accordion">
+                        <div class="card">
+                          <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                              ¿Cuál es el tiempo de producción para los artículos personalizados?
+                            </a>
+                          </div>
+                          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                              El tiempo de producción para los artículos personalizados puede variar dependiendo del volumen de trabajo y la complejidad del diseño. Por lo general, estimamos un tiempo de producción de 5 a 7 días hábiles. Sin embargo, te recomendamos contactarnos directamente para obtener una estimación más precisa.                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                              ¿Qué métodos de pago aceptan?</a>
+                          </div>
+                          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                              Aceptamos pagos mediante transferencia bancaria, depósito en efectivo y pagos en línea a través de plataformas como PayPal. Al confirmar tu pedido, te proporcionaremos todos los detalles necesarios para que puedas realizar el pago de manera segura y conveniente.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                              ¿Ofrecen envío de los productos?
+                            </a>
+                          </div>
+                          <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                              Sí, realizamos envíos a nivel nacional. Trabajamos con servicios de mensajería confiables para asegurarnos de que tus productos lleguen de manera segura y puntual. Los gastos de envío se calculan según la ubicación y el peso del paquete. Te proporcionaremos los detalles exactos al momento de confirmar tu pedido.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                              ¿Cuáles son los precios de los artículos disponibles en su tienda?
+                            </a>
+                          </div>
+                          <div id="collapseFour" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                              En nuestra tienda, ofrecemos una amplia variedad de artículos estampados con la técnica de sublimación. A continuación, te presentamos nuestros precios para diferentes categorías de productos:
+                              <img src="precios.jpg" alt="precios">
+                              <p>Ten en cuenta que los precios pueden variar según el diseño y personalización adicional que desees. ¡Visítanos para conocer todas nuestras opciones y encontrar el producto perfecto para ti!</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                              ¿Cuáles son los precios al por mayor para las camisetas personalizadas?
+                             </a>
+                          </div>
+                          <div id="collapseFive" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                              Nuestros precios al por mayor para las camisetas personalizadas son los siguientes:
+                              <img src="precios_02.jpg" alt="precios">
+                              <p>Estos precios son aplicables exclusivamente a la camiseta blanca con estampado en sublimación, con un tamaño máximo de 30 de ancho por 30 de alto. ¡Aprovecha nuestras ofertas al comprar en mayor cantidad!</p>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="card">
+                          <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseSix">
+                              ¿Tienen opciones de personalización adicionales, como agregar logos o nombres individuales a los artículos?
+                            </a>
+                          </div>
+                          <div id="collapseSix" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                              Sí, ofrecemos opciones de personalización adicionales para adaptarnos a tus necesidades. Podemos agregar logos, nombres individuales u otras características personalizadas a nuestros artículos. Ponte en contacto con nosotros para discutir tus requisitos específicos y te proporcionaremos opciones y presupuestos personalizados.
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
                     </div>
                 </section>
                 <section>
@@ -175,7 +305,33 @@
                     </div>
                 </section>
             </div>
-            <a href="https://wa.me/3245045027/?text=Me%20gustaría%20obtener%20más%20información%20acerca%20de%20sus%20productos"  class="Whatsapp_Link" target="_blank"><img src="../Iconos/WhatsappFixed.png" class="Whatsapp_Fixed"></a>
         </main>
     </body>
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Start Script -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/templatemo.js"></script>
+<script src="js/custom.js"></script>
+<!-- End Script -->
 </html>

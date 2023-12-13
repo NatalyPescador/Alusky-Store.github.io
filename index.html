@@ -11,138 +11,312 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        
+        <!-- Bootstrap -->
+
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- Slick -->
+<link rel="stylesheet" type="text/css" href="css/slick.min.css">
+<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/templatemo.css">
+<link rel="stylesheet" href="css/custom.css">
+
+<!-- Load fonts style after rendering the layout styles -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+
+<!-- Load map styles -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+<!---->
+
+
+
+
+                            <!--<">!-->
+
+
+
         <title>Alusky Store</title>
     </head>
     <body>
-        <header>
-            <nav class="nav_bar">
-                <div class="header_container">
-                    <div class="top_header">
-                        <div class="left_header">
-                            <a href="index.html" class="logo_img">
-                                <img src="Imagenes/LOGO.jpg" alt="Logo de Alusky Store">
-                            </a>
-                            <input type="text" placeholder="Buscar en Alusky" class="search_bar">
-                        </div>
-                        <div class="right_header">
-                            <button  onclick="location.href='Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
-                            <button onclick="location.href='Registrarse/index.html'" class="sign_in_button">Registrarse</button>
-                            <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='Carrito de Compras/index.html'">
-                                <img src="Iconos/Carrito de Compras.png">
-                            </button>
-                            <button type="button" class="nav_bar_button dropdown_menu" id="dropdown_menu">
-                                <img src="Iconos/menu.png" alt="menu desplegable">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="nav_list" id="menu">
-                        <button type="button" class="close_button" id="close_button">
-                            <img src="Iconos/close.png" class="close_icon">
-                        </button>
-                        <a href="Iniciar Sesion/index.html" class="link_account">Mi Cuenta</a>
-                        <ul class="nav_menu">
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="Catálogo/index.html">Catálogo</a></li>
-                            <li><a href="Accesorios/index.html">Accesorios</a></li>
-                            <!-- <li><a href="Personalizar/index.html">Personalizar</a></li> -->
-                            <li><a href="Preguntas Frecuentes/index.html">Preguntas Frecuentes</a></li>
-                        </ul> 
-                        <hr class="line__bar"> 
-                    </div>
+
+
+<!--INICIO DEL HEADER!-->
+
+<header>
+    <nav class="nav_bar">
+        <div class="header_container">
+            <div class="top_header">
+                <div class="left_header">
+                    <a href="index.html" class="logo_img">
+                        <img src="Imagenes/LOGO.jpg" alt="Logo de Alusky Store">
+                    </a>
+                    <!-- <input type="text" placeholder="Buscar en Alusky" class="search_bar"> -->
                 </div>
-            </nav>
-            <script src="showMenu.js"></script>
-        </header>
-        <main>
-            <section class="main_section">
-                <div class="main_section_container">
-                    <div class="main_section_image">
-                        <img src="Imagenes/Imagen Principal.png" alt="Imagen de modelos de prendas de vestir">
-                    </div>
-                    <div class="main_section_div">
-                        <h2>Diseños</h2>
-                        <h2>Personalizados</h2>
-                        <hr class="line_titles">
-                        <p>Te ayudamos a personalizar tus prendas</p>
-                        <p>de vestir de la manera que desees</p>
-                        <button onclick="location.href='Catálogo/Vistas/Catalogo.php'" class="personalize_button">Ir al catálogo</button>
-                    </div>
-                </div>  
+                <div class="right_header">
+                    <button  onclick="location.href='Iniciar Sesion/index.html'" class="log_in_button">Iniciar Sesión</button>
+                    <button onclick="location.href='Registrarse/index.html'" class="sign_in_button">Registrarse</button>
+                    <button type="button" class="nav_bar_button shopping_cart" onclick="location.href='Carrito de Compras/index.html'">
+                        <img src="Iconos/Carrito de Compras.png">
+                    </button>
+                    <button type="button" class="nav_bar_button dropdown_menu" id="dropdown_menu">
+                        <img src="Iconos/menu.png" alt="menu desplegable">
+                    </button>
+                </div>
+            </div><br>
+            <div class="nav_list" id="menu">
+                <button type="button" class="close_button" id="close_button">
+                    <img src="Iconos/close.png" class="close_icon">
+                </button>
+                <a href="Iniciar Sesion/index.html" class="link_account">Mi Cuenta</a>
+                <ul class="nav_menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Catálogo/index.html">Catálogo</a></li>
+                    <li><a href="Accesorios/index.html">Accesorios</a></li>
+                    <li><a href="Personalizar/index.html">Personalizar</a></li>
+                    <li><a href="Preguntas Frecuentes/index.html">Preguntas Frecuentes</a></li>
+                </ul>
+                <br> 
+            </div>
+        </div>
+    </nav>
+    <script src="showMenu.js"></script>
+</header>
+
+<!-- END HEADER -->
+
+
+       
+
+<!--INICIO DEL CARROUSEL!-->
+
+            <main>
+           
+            <section>
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                  <li data-target="#demo" data-slide-to="3"></li>
+                </ul>
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="Imagenes/003.png" alt="slide1" width="1100" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Imagenes/002.png" alt="slide2" width="1100" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Imagenes/001.png" alt="slide3" width="1100" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Imagenes/004.png" alt="slide4" width="1100" height="500">
+                  </div>
+                </div>
+                
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
             </section>
-            <section class="section2">
+
+                        <!--INICIO DEL SECTION 1!-->
+
+
+            <section class="section2, py-5 bg-dark">
                 <div class="second_section_container">
-                    <h3>Nuestros productos más vendidos</h3>
+                    <h1 class="text-light">¡Nuestros productos más vendidos!</h1>
                     <hr class="line_titles">
-                    <div class="slider_container">
-                        <div class="first_image">
-                            <h4>Buzos Hombre</h4>
-                            <div>
-                                <img src="Imagenes/IMG_0025.png" alt="Buzo gris Bugs Bunny">
-                            </div>
+                    <div class="row">
+                        <div class="col-12 col-md-2 p-5 mt-3">
+                            <a href="#"><img src="Imagenes/SECTION01_.png" class="rounded-circle img-fluid border"></a>
+                            <h5 class="text-light mt-3 mb-3">Buzos Hombre</h5>
+                           
                         </div>
-                        <div class="second_image">
-                            <h4>Camisetas</h4>
-                            <div>
-                                <img src="Imagenes/Deff copia.png" alt="Camisa blanca Deff">
-                            </div>
+                        <div class="col-12 col-md-2 p-5 mt-3">
+                            <a href="#"><img src="Imagenes/SECTION01_2.png" class="rounded-circle img-fluid border"></a>
+                            <h2 class="h5 text-center text-light mt-3 mb-3">Camisas Personalizadas</h2>
+                            
                         </div>
-                        <div class="third_image">
-                            <h4>Buzos Mujer</h4>
-                            <div>
-                                <img src="Imagenes/IMG_9695.png" alt="Buzo rosado">
-                            </div>
+                        <div class="col-12 col-md-2 p-5 mt-3">
+                            <a href="#"><img src="Imagenes/SECTION01_3.png" class="rounded-circle img-fluid border"></a>
+                            <h2 class="h5 text-center text-light mt-3 mb-3">Buzos Mujer</h2>
+                            
                         </div>
-                        <div class="fourth_image">
-                            <h4>Pijamas</h4>
-                            <div>
-                                <img src="Imagenes/IMG_9950.png" alt="Pijama SpiderMan">
-                            </div>
+                        <div class="col-12 col-md-2 p-5 mt-3">
+                            <a href="#"><img src="Imagenes/SECTION01_1.png" class="rounded-circle img-fluid border"></a>
+                            <h2 class="h5 text-center text-light mt-3 mb-3">Pijamas</h2>
+                            
                         </div>
+                        <div class="col-12 col-md-2 p-5 mt-3">
+                            <a href="#"><img src="Imagenes/SECTION01_4.png" class="rounded-circle img-fluid border"></a>
+                            <h2 class="h5 text-center text-light mt-3 mb-3">Mugs</h2>
+                            
+                        </div>
+                        <div class="col-12 col-md-2 p-5 mt-3">
+                            <a href="#"><img src="Imagenes/SECTION01_5.png" class="rounded-circle img-fluid border"></a>
+                            <h2 class="h5 text-center text-light mt-3 mb-3">Gorras Trucker</h2>
+                            
+                        </div>
+                        
+            
                     </div>
                 </div>
             </section>
-            <section class="section3">
-                <div class="third_section_container">
-                    <h3>Selecciona dependiendo del estilo</h3>
+ 
+
+
+                        <!--INICIO DEL SECTION 2!-->
+
+
+                <section>
+
+                            
+         <div class="container py-5">
+                <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="card mb-3 product-wap rounded-0">
+                                <div class="card rounded-0">
+                                    <img class="card-img rounded-0 img-fluid" src="Imagenes/img_catalogo.png">
+                                   
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="h5 text-decoration-none">Buzos Deportivos</a>
+                                    <ul class="w-100 list-unstyled justify-content-center d-flex mb-0">
+                                        <li>M/L/X/XL</li>                                        
+                                    </ul>                                   
+                                    <p class="mb-0 text-center">$45.000 COP</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <div class="card mb-3 product-wap rounded-0">
+                                <div class="card rounded-0">
+                                    <img class="card-img rounded-0 img-fluid" src="Imagenes/img_catalogo_2.png">
+                                   
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="h5 text-decoration-none text-center">Buzos Super Heroes</a>
+                                    <ul class="w-100 list-unstyled d-flex justify-content-center mb-0">
+                                        <li>M/L/X/XL</li>                                        
+                                    </ul>                                   
+                                    <p class="text-center mb-0">$35.000 COP</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card mb-3 product-wap rounded-0">
+                                <div class="card rounded-0">
+                                    <img class="card-img rounded-0 img-fluid" src="Imagenes/img_catalogo_3.png">
+                                   
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="h4 text-decoration-none text-center">Buzos Niñ@s</a>
+                                    <ul class="w-100 list-unstyled justify-content-center d-flex mb-0">
+                                        <li>M/L/X/XL</li>
+                                        
+                                    </ul>
+                                   
+                                    <p class="text-center mb-0">$25.000 COP</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card mb-3 product-wap rounded-0">
+                                <div class="card rounded-0">
+                                    <img class="card-img rounded-0 img-fluid" src="Imagenes/img_catalogo_4.png">
+                                   
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="h4 text-decoration-none text-center">Buzos Cartoon</a>
+                                    <ul class="w-100 list-unstyled  justify-content-center d-flex mb-0">
+                                        <li>M/L/X/XL</li>
+                                        
+                                    </ul>
+                                   
+                                    <p class="text-center mb-0">$35.000 COP</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>                
+        </div>
+
+    </section>
+
+
+
+            
+                        <!--INICIO DEL SECTION 3!-->
+
+
+            
+            <section class="section3 bg-dark">
+                <div class="third_section_container p-5">
+                    <h1 class="text-info">Personalización de Artículos.</h1>
+                    <h4 class="text-light">Crea productos personalizados con tus propios diseños</h4>
                     <hr class="line_titles">
                     <div class="root_container">
                         <div class="container1">
                             <ul class="list1">
                                 <li class="items1">ROPA</li>
-                                <li class="items1"><a href="Catálogo/Vistas/Camisetas.php">Camisetas</a></li>
+                                <li class="items1 text-light"><a href="Catálogo/Vistas/Camisetas.php">Camisetas</a></li>
                                 <li class="items1"><a href="Catálogo/Vistas/Buzos.php">Buzos</a></li>
                                 <li class="items1"><a href="Catálogo/Vistas/Sudaderas.php">Sudaderas</a></li>
                                 <li class="items1"><a href="Catálogo/Vistas/Pijamas.php">Pijamas</a></li>
                             </ul>
                             <div class="image1">
-                                <img src="Imagenes/joaaaan.png" alt="camiseta blanca estampada" class="imagenes-divs">
+                                <img src="Imagenes/SECTION01_6.png" alt="camiseta blanca estampada" class="imagenes-divs">
                             </div>
                         </div>
-                        <div class="container2">
+                        <div class="container2">                            
                             <ul class="list2">
+                                
                                 <li class="items2">ACCESORIOS</li>
                                 <li class="items2"><a href="Catálogo/Vistas/Accesorios.php">Posillos</a></li>
-                                <li class="items2"><a href="Catálogo/Vistas/Accesorios.php">Decoración</a></li>
+                                <li class="items2"><a href="#">Gorras</a></li>
                             </ul>
                             <div class="image2">
-                                <img src="Catálogo/Productos Alusky/Pocillos personalizables.png" alt="Gorra café" class="imagenes-divs">
+                                <img src="Imagenes/SECTION01-10.png" alt="silueta" class="imagenes-divs">
                             </div>
+                            
                         </div>
                     </div>
                 </div>
             </section>
             <section class="section4">
-                <div class="video_section">
-                    <h3>¿Cómo nos puedes enviar tus diseños?</h3>
+                <div class="video_section p-5">
+                    <h1 class="text-muted">Personaliza, Imagina, Crea</h1>
                     <hr class="line_titles">
+                    <h4 class="text-warning">Si tienes una idea ¡Ve por ella!</h4>
                     <div class="video_container">
                         <iframe src="https://www.youtube.com/embed/QPgtolnhwRI?start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video"></iframe>
                     </div>
                 </div>
             </section>
-            <section class="section5">
+            <section class="section5 p-5 bg-light">
                 <div class="fifth_section_container">
-                    <h3>¿Cómo funciona?</h3>
+                    <h1 class="text-info">¡Trabajamos por el Arte</h1>
+                    <h3 class="text-dark">y por brindarte un excelente servicio!</h3>
                     <hr class="line_titles">
                     <div class="cards_container">
                         <div class="card1">
@@ -167,8 +341,11 @@
         </main>
         <footer>
             <div class="footer_container">
-                <a href="index.html"><img src="Imagenes/LOGO.jpg" alt="Logo de la marca" class="logo_image"></a>
+               
                 <div class="lists_container">
+                    <div class="logo_image"><br><br>
+                        <a href="index.html"><img src="Imagenes/logoAlusky_2.png" alt="Logo de la marca" class="logo_image"></a>
+                    </div>
                     <div class="products_list">
                         <ul>
                             <li>Nuestros Productos</li>
@@ -178,7 +355,7 @@
                     </div>
                     <div class="social_list">
                         <ul>
-                            <li class="item-list3">Redes Sociales</li>
+                            <!-- <li class="item-list3">Redes Sociales</li> -->
                         </ul>
                         <div class="social_media_images">
                             <a href="https://www.instagram.com/alusky_store/" target="_blank"><img src="Iconos/instagram.png"></a>
@@ -195,10 +372,31 @@
                     </div>
                 </div>
                 <div class="brand_container">
-                    <hr class="line__bar">
+                    <!-- <hr class="line__bar"> -->
                     <p>Copyright © 2023 Alusky Store</p>
                 </div>
             </div>
         </footer>
     </body>
+
+
+
+    <!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Start Script -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/templatemo.js"></script>
+<script src="js/custom.js"></script>
+<!-- End Script -->
+
 </html>

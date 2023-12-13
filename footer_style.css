@@ -13,7 +13,7 @@ footer {
 }
 
 .footer_container .logo_image {
-    width: 50px;
+    width: 100px;
     margin-top: -1.5rem;
     border: 1px solid #8C635A;
 }
@@ -54,7 +54,7 @@ footer {
     justify-content: center;
     text-align: center;
     gap: 1rem;
-    border: 1px solid #ffffff;
+    
 }
 
 .social_media_images {
@@ -64,7 +64,7 @@ footer {
 }
 
 .social_media_images img {
-    width: 30px;
+    width: 40px;
 }
 
 .contact_list li {
